@@ -1,0 +1,8 @@
+games:
+- !!python/tuple
+  - DOG
+  - 3
+score:
+- !!python/tuple
+  - DOG
+  - 87

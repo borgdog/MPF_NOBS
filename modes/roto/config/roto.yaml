@@ -1,0 +1,65 @@
+#config_version=4
+# NOBS 
+
+mode:
+    start_events: ball_started
+    priority: 100
+
+logic_blocks:
+    counters:
+        rotocount:
+            count_events: dingwalls_hit, slings_hit
+            starting_count: 1
+            count_complete_value: 14
+            direction: up
+            reset_on_complete: true
+            persist_state: true
+            disable_on_complete: false
+
+scoring:
+    extraball_hit:      
+        score: 1 * current_player.dpegs
+        roto:
+            score: machine.roto+current_player.rotocount_count if machine.roto+current_player.rotocount_count<14 else machine.roto+current_player.rotocount_count-13
+            action: set_machine
+    rototarget_hit{machine.roto<10}:
+        score: current_player.roto * current_player.dpegs
+        roto:
+            score: machine.roto+current_player.rotocount_count if machine.roto+current_player.rotocount_count<14 else machine.roto+current_player.rotocount_count-13
+            action: set_machine
+    rototarget_hit{machine.roto>9}:
+        score: 10 * current_player.dpegs
+        roto:
+            score: machine.roto+current_player.rotocount_count if machine.roto+current_player.rotocount_count<14 else machine.roto+current_player.rotocount_count-13
+            action: set_machine
+
+event_player:
+    machine_var_roto:
+        roto_{machine_var_roto}
+
+    # machine_var_roto{machine.roto==1}:
+    #     roto_1
+    # machine_var_roto{machine.roto==2}:
+    #     roto_2
+    # machine_var_roto{machine.roto==3}:
+    #     roto_3
+    # machine_var_roto{machine.roto==4}:
+    #     roto_4
+    # machine_var_roto{machine.roto==5}:
+    #     roto_5
+    # machine_var_roto{machine.roto==6}:
+    #     roto_6
+    # machine_var_roto{machine.roto==7}:
+    #     roto_7
+    # machine_var_roto{machine.roto==8}:
+    #     roto_8
+    # machine_var_roto{machine.roto==9}:
+    #     roto_9
+    # machine_var_roto{machine.roto==10}:
+    #     roto_10
+    # machine_var_roto{machine.roto==11}:
+    #     roto_11
+    # machine_var_roto{machine.roto==12}:
+    #     roto_12
+    # machine_var_roto{machine.roto==13}:
+    #     roto_13

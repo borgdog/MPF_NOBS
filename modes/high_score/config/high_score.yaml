@@ -1,0 +1,154 @@
+#config_version=4
+# NOBS
+
+high_score:
+  _overwrite: True
+  categories:
+  - score:
+      - HI_PEG
+  - games:
+      - HI_GMS
+  award_slide_display_time: 2.0s
+  defaults:
+    score:
+      - DOG: 234
+    games:
+      - DOG: 1
+
+show_player:
+  high_score_enter_initials_started:
+    sh_knock3times:
+      loops: 0
+
+shows:
+  sh_knock3times:
+    - time: 0
+      coils:
+        c_knocker
+    - time: 200ms
+      coils:
+        c_knocker
+    - time: 400ms
+      coils:
+        c_knocker
+
+slides:
+  _overwrite: True
+
+  high_score_enter_initials:
+    - type: image
+      image: nobs_bg
+      z: 2
+
+    - type: text
+      font_size: 240
+      font_name: Ten_segment
+      text: P(player_num)
+      color: blue
+      x: 0
+      y: 930    
+      z: 3
+      anchor_x: left
+      anchor_y: bottom
+
+
+    - type: text
+      x: 1024
+      y: 580    
+      font_size: 240
+      font_name: Ten_segment
+      anchor_x: right
+      anchor_y: bottom
+      text: (award)
+      color: blue
+      z: 3
+
+    - type: text_input
+      key: high_score
+      char_list: "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+      font_name: Ten_segment
+      color: blue
+      x: 545
+      y: 930
+      font_size: 240
+      anchor_x: left
+      anchor_y: bottom
+      z: 3
+      animations:
+        pre_show_slide:
+          - property: opacity
+            value: 0
+            duration: .5s
+          - property: opacity
+            value: 1
+            duration: .5s
+            repeat: -1
+
+    - type: text
+      text: ""
+      key: high_score
+      font_size: 240  
+      font_name: Ten_segment  
+      anchor_x: left
+      anchor_y: bottom
+      x: 545
+      y: 930
+      color: blue
+      z: 3
+
+        
+  high_score_award_display:
+    - type: image
+      image: nobs_bg
+      z: 2
+
+    - type: text
+      text: (player_name)
+      font_size: 240
+      font_name: Ten_segment  
+      anchor_x: left
+      anchor_y: bottom    
+      x: 0
+      y: 930
+      z: 3
+      color: blue
+      animations:
+        show_slide:
+        - property: opacity
+          value: 1
+          duration: 0.08s
+        - property: opacity
+          value: 0
+          duration: 0.08s
+          repeat: true
+
+    - type: text
+      text: (value)
+      font_size: 240
+      font_name: Ten_segment  
+      anchor_x: right
+      anchor_y: bottom    
+      x: 1024
+      y: 930
+      z: 3
+      color: blue
+      animations:
+        show_slide:
+        - property: opacity
+          value: 1
+          duration: 0.08s
+        - property: opacity
+          value: 0
+          duration: 0.08s
+          repeat: true
+          
+    - type: text
+      x: 1024
+      y: 580
+      font_size: 240
+      font_name: Ten_segment
+      anchor_x: right
+      anchor_y: bottom
+      text: (award)
+      color: blue
+      z: 3

@@ -1,0 +1,10 @@
+#config_version=4
+# NOBS
+
+show_player:
+  mode_attract_started: 
+    attract_light_show:
+      speed: 8
+    attract_text_show:
+      speed: 1
+

@@ -1,0 +1,300 @@
+#config_version=4
+# NOBS
+
+mode:
+    start_events: ball_started
+    priority: 100
+#
+logic_blocks:
+    counters:
+        ebcounter:
+            count_events: top_king_lit_hit, top_queen_lit_hit, top_jack_lit_hit, right_2_lit_hit, left_inlane_lit_hit, right_outlane_lit_hit
+            starting_count: 0
+            count_complete_value: 6
+            direction: up
+            events_when_complete:  
+                extra_ball_lit
+            reset_on_complete: false
+
+extra_balls:
+    eb:
+        award_events: extra_ball_hit
+        reset_events: ball_started
+#
+
+scoring:
+
+    player_score:     #add gamescore when scoring player 1
+        gamescore:
+            score: change
+            action: add
+    
+    player_games{current_player.number==1}:
+        player1games:
+            score: change
+            action: add_machine
+
+    player_games{current_player.number==2}:
+        player2games:
+            score: change
+            action: add_machine
+
+    
+    player_gamescore{current_player.gamescore>120}:  #check for winning game
+        gameswon: 1
+        games: 1
+        gamescore:              #RESET FOR SINGLE PLAYER GAME
+            score: 0
+            action: set
+
+    player_gameswon{game.num_players==2 and player_num==1}:   
+        skunks: 
+            score: 1 if players[1].gamescore<91 else 0             # CHECK FOR SKUNK PLAYER 1 WON
+            action: set
+
+    player_gameswon{game.num_players==2 and player_num==2}:   
+        skunks: 
+            score: 1 if players[0].gamescore<91 else 0             # CHECK FOR SKUNK PLAYER 2 WON
+            action: set
+
+    player_skunks{current_player.skunks==1 and player_num==1}:
+        games: 3 if players[1].gamescore<61 else 1              # CHECK FOR DOUBLE SKUNK IF SKUNK
+        gamereset: 1
+
+    player_skunks{current_player.skunks==1 and player_num==2}:
+        games: 3 if players[0].gamescore<61 else 1              # CHECK FOR DOUBLE SKUNK IF SKUNK SCORE
+        gamereset: 1
+    
+    player_skunks{current_player.skunks==0}:    # INITIATE RESET IF NO SKUNKS
+        gamereset: 1
+ 
+    player_gamereset{game.num_players==2}: #RESET GAME SCORES AFTER GAME WON on 2 player games
+        resetplayer1: 1
+        resetplayer2: 1
+        
+    player_resetplayer1:
+        gamescore:
+            score: 0
+            player: 1
+            action: set
+
+    player_resetplayer2:
+        gamescore:
+            score: 0
+            player: 2
+            action: set
+    
+    dp_pegs:
+        dpegs:
+            score: 2
+            action: set
+    ball_drain:
+        dpegs:
+            score: 1
+            action: set
+
+    award_heels:
+        score: 2
+
+    handa_complete{machine.roto==1 or machine.roto==3}:
+        score: 16 * current_player.dpegs
+    handa_complete{machine.roto==2}:
+        score: 15 * current_player.dpegs
+    handa_complete{machine.roto==4 or machine.roto==7 or machine.roto==8}:
+        score: 10 * current_player.dpegs
+    handa_complete{machine.roto==5 or machine.roto==6}:
+        score: 8 * current_player.dpegs
+    handa_complete{machine.roto==9}:
+        score: 12 * current_player.dpegs
+    handa_complete{current_player.roto>9}:
+        score: 14 * current_player.dpegs
+
+    handb_complete{machine.roto==1 or machine.roto==3 or machine.roto==7 or machine.roto==9}:
+        score: 14 * current_player.dpegs
+    handb_complete{machine.roto==2 or machine.roto==8}:
+        score: 12 * current_player.dpegs
+    handb_complete{machine.roto==4 or machine.roto==6}:
+        score: 24 * current_player.dpegs
+    handb_complete{machine.roto==5}:
+        score: 21 * current_player.dpegs
+    handb_complete{machine.roto==10 or machine.roto==11 or machine.roto==12 or machine.roto==13}:
+        score: 16 * current_player.dpegs
+
+    handc_complete{machine.roto==1 or machine.roto==2}:
+        score: 10 * current_player.dpegs
+    handc_complete{machine.roto==3 or machine.roto==4 or current_player.roto>10}:
+        score: 8 * current_player.dpegs
+    handc_complete{machine.roto==5 or machine.roto==10}:
+        score: 9 * current_player.dpegs
+    handc_complete{machine.roto==6 or machine.roto==7 or machine.roto==8 or machine.roto==9}:
+        score: 16 * current_player.dpegs
+
+    handd_complete{machine.roto==1 or machine.roto==2 or machine.roto==3 or machine.roto==4 or machine.roto==6 or machine.roto==7 or machine.roto==8 or machine.roto==9}:
+        score: 9 * current_player.dpegs
+    handd_complete{machine.roto==5}:
+        score: 17 * current_player.dpegs
+    handd_complete{machine.roto==10}:
+        score: 12 * current_player.dpegs
+    handd_complete{current_player.roto>10}:
+        score: 16 * current_player.dpegs
+ 
+    left_outlane_hit{machine.roto==5 or current_player.roto>9}:
+        score: 2 * current_player.dpegs
+    left_inlane_hit{machine.roto==7 or machine.roto==8}:
+        score: 2 * current_player.dpegs
+    right_outlane_hit{machine.roto==7 or machine.roto==8}:
+        score: 2 * current_player.dpegs
+    droptarget_6_hit{machine.roto==6 or machine.roto==9}:
+        score: 2 * current_player.dpegs
+    droptarget_6b_hit{machine.roto==6 or machine.roto==9}:
+        score: 2 * current_player.dpegs
+    droptarget_5_hit{machine.roto==5 or current_player.roto>9}:
+        score: 2 * current_player.dpegs
+    droptarget_5b_hit{machine.roto==5 or current_player.roto>9}:
+        score: 2 * current_player.dpegs
+    droptarget_4_hit{machine.roto==4}:
+        score: 2 * current_player.dpegs
+    droptarget_9_hit{machine.roto==6 or machine.roto==9}:
+        score: 2 * current_player.dpegs
+    droptarget_A_hit{machine.roto==1}:
+        score: 2 * current_player.dpegs
+    droptarget_2_hit{machine.roto==2}:
+        score: 2 * current_player.dpegs
+    droptarget_3_hit{machine.roto==3}:
+        score: 2 * current_player.dpegs
+    right_2_hit{machine.roto==2}:
+        score: 2 * current_player.dpegs
+    top_king_hit{machine.roto==13 or machine.roto==5}:
+        score: 2 * current_player.dpegs
+    top_queen_hit{machine.roto==12 or machine.roto==5}:
+        score: 2 * current_player.dpegs
+    top_jack_hit{machine.roto==11 or machine.roto==5}:
+        score: 2 * current_player.dpegs
+   
+    star1_hit{current_player.top_king3_p_offon==1}:
+        score: 1 * current_player.dpegs
+    star2_hit{current_player.top_queen3_p_offon==1}:
+        score: 1 * current_player.dpegs
+    star3_hit{current_player.top_jack3_p_offon==1}:
+        score: 1 * current_player.dpegs
+    star4_hit{current_player.right_outlane3_p_offon==1}:
+        score: 1 * current_player.dpegs
+    star5_hit{current_player.left_inlane3_p_offon==1}:
+        score: 1 * current_player.dpegs
+
+#
+achievements:
+    dp_handa:
+        start_events: mode_base_started, ball_started
+        complete_events: handa_complete
+        reset_events: ball_drain
+        show_tokens:
+            leds: l_DPa
+        show_when_started: off
+        show_when_completed: on
+    dp_handb:
+        start_events: mode_base_started, ball_started
+        complete_events: handb_complete
+        reset_events: ball_drain
+        show_tokens:
+            leds: l_DPb
+        show_when_started: off
+        show_when_completed: on
+    dp_handc:
+        start_events: mode_base_started, ball_started
+        complete_events: handc_complete
+        reset_events: ball_drain
+        show_tokens:
+            leds: l_DPc
+        show_when_started: off
+        show_when_completed: on
+    dp_handd:
+        start_events: mode_base_started, ball_started
+        complete_events: handd_complete
+        reset_events: ball_drain
+        show_tokens:
+            leds: l_DPd
+        show_when_started: off
+        show_when_completed: on
+
+achievement_groups:
+    dp_hands:
+        achievements: dp_handa, dp_handb, dp_handc, dp_handd
+        events_when_all_completed: dp_pegs
+
+slide_player:
+  mode_base_started: nobs_running_slide
+  player_gameswon: nobs_running_slide
+
+show_player:
+
+    left_outlane_hit:
+        open_left: 
+            loops: 0
+
+    extra_ball_lit:
+        open_right: 
+            loops: 0
+
+    extra_ball_hit:
+        shoot_again: play
+
+    handa_complete: 
+        show_flash:
+            loops: 5
+            show_tokens:
+                led: l_handA2, l_handA2b, l_handA3, l_handAa, l_right2
+                color1: yellow
+    handb_complete: 
+        show_flash:
+            loops: 5
+            show_tokens:
+                led: l_handB4, l_handB5, l_handB5b, l_handB6
+                color1: green
+    handc_complete: 
+        show_flash:
+            loops: 5
+            show_tokens:
+                led: l_handc6, l_handc7, l_handc8, l_handc9, l_leftin, l_rightout
+                color1: red
+    handd_complete: 
+        show_flash:
+            loops: 5
+            show_tokens:
+                led: l_handd5, l_handdj, l_handdq, l_handdk, l_topJ, l_topQ, l_topK, l_leftout
+                color1: blue
+
+shows:
+    open_left:
+    - time: 2
+      events:
+        servo_lout_open
+
+    open_right:
+    - time: 2
+      events:
+        servo_rout_open
+
+    show_flash:
+    - duration: .25
+      leds:
+        (led): (color1)
+    - duration: .25
+      leds:
+        (led): off
+
+    shoot_again:
+    - time: 0
+      leds:
+        l_shootagain: white
+      duration: -1
+
+    skillflash:
+    - duration: .25
+      leds:
+        (leds): blue
+    - duration: .25
+      leds:
+        (leds): off
+# 
+

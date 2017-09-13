@@ -1,0 +1,132 @@
+#config_version=4
+# NOBS
+
+tilt:
+    tilt_warning_events: s_tiltbob
+    tilt_warning_switch_tag: tilt_warning
+    warnings_to_tilt: 3
+    reset_warnings_events: ball_ended
+    multiple_hit_window: 400ms
+    settle_time: 5s
+
+slide_player:
+  tilt_warning_1: tilt_warning1
+  tilt_warning_2: tilt_warning2
+  tilt: tilt_slide
+  tilt_clear:
+    tilt_slide:
+      action: remove
+slides:
+  tilt_warning1:
+    widgets:
+        - type: text
+          x: 0
+          y: 580          
+          font_size: 240
+          font_name: Ten_segment
+          anchor_x: left
+          anchor_y: bottom
+          text: DAN
+          color: blue
+          z: 3
+
+        - type: text
+          x: 1024
+          y: 580         
+          font_size: 240
+          font_name: Ten_segment
+          anchor_x: right
+          anchor_y: bottom
+          text: GER
+          color: blue
+          z: 3
+    expire: 1s
+
+  tilt_warning2:
+    widgets:
+        - type: text
+          x: 0
+          y: 580          
+          font_size: 240
+          font_name: Ten_segment
+          anchor_x: left
+          anchor_y: bottom
+          text: DAN
+          color: blue
+          z: 3
+
+        - type: text
+          x: 1024
+          y: 580          
+          font_size: 240
+          font_name: Ten_segment
+          anchor_x: right
+          anchor_y: bottom
+          text: GER
+          color: blue
+          z: 3
+
+        - type: text
+          text: DAN
+          font_size: 240
+          font_name: Ten_segment  
+          anchor_x: left
+          anchor_y: bottom    
+          x: 0
+          y: 930
+          z: 3
+          color: blue
+          expire: 1s
+
+        - type: text
+          text: GER
+          font_size: 240
+          font_name: Ten_segment  
+          anchor_x: right
+          anchor_y: bottom    
+          x: 1024
+          y: 930
+          z: 3
+          color: blue
+          expire: 1s
+    expire: 2s
+  tilt_slide:
+        - type: text
+          x: 0
+          y: 580          
+          font_size: 240
+          font_name: Ten_segment
+          anchor_x: left
+          anchor_y: bottom
+          text: " TI"
+          color: blue
+          z: 3
+          animations:
+            pre_show_slide:
+              - property: opacity
+                value: 0
+                duration: .25s
+              - property: opacity
+                value: 1
+                duration: .25s
+                repeat: -1
+
+        - type: text
+          x: 1024
+          y: 580         
+          font_size: 240
+          font_name: Ten_segment
+          anchor_x: right
+          anchor_y: bottom
+          text: "LT "
+          color: blue
+          z: 3
+          animations:
+            pre_show_slide:
+              - property: opacity
+                value: 0
+                duration: .25s
+              - property: opacity
+                value: 1
+                duration: .25s
+                repeat: -1

@@ -1,0 +1,265 @@
+#config_version=4
+# NOBS
+
+mode:
+    start_events: ball_starting
+    restart_on_next_ball: true
+    stop_events: 
+        award_heels
+        sw_playfield_active
+    priority: 500
+
+achievements:
+    skill_king:
+        show_tokens:
+            leds: l_topK
+        show_when_enabled: off
+        show_when_selected: skillflash
+        show_when_completed: off
+        complete_events: top_king_hit
+        events_when_completed: award_heels
+        reset_events: sw_playfield_active
+
+    skill_queen:
+        show_tokens:
+            leds: l_topQ
+        show_when_enabled: off
+        show_when_selected: skillflash
+        show_when_completed: off
+        complete_events: top_queen_hit 
+        events_when_completed: award_heels  
+        reset_events: sw_playfield_active
+      
+    skill_jack:
+        show_tokens:
+            leds: l_topJ
+        show_when_enabled: off
+        show_when_selected: skillflash
+        show_when_completed: off
+        complete_events: top_jack_hit
+        events_when_completed: award_heels
+        reset_events: sw_playfield_active
+
+achievement_groups:
+    skillshot:
+        achievements:
+            skill_jack
+            skill_queen
+            skill_king
+        auto_select: yes
+        select_random_achievement_events: mode_skill_shot_starting
+        enable_events: ball_starting
+
+slide_player:
+    mode_skill_shot_started{current_player.number==1}: player1up
+    mode_skill_shot_started{current_player.number==2}: player2up
+
+slides:
+    player1up:
+        widgets:
+
+            - type: image
+              image: nobs_bg
+              z: 3
+
+            - type: text
+              text: (player1|score)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 0
+              y: 930
+              font_size: 240
+              anchor_x: left
+              anchor_y: bottom
+              z: 4
+              animations:
+                  pre_show_slide:
+                    - property: opacity
+                      value: 0
+                      duration: .5s
+                    - property: opacity
+                      value: 1
+                      duration: .5s
+                      repeat: -1
+                      
+            - type: text
+              text: (player1|gamescore)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 0
+              y: 580        
+              font_size: 240
+              anchor_x: left
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (player1|games)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 0
+              y: 235
+              font_size: 240
+              anchor_x: left
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (player2|score)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 1024
+              y: 930
+              font_size: 240
+              anchor_x: right
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (player2|gamescore)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 1024
+              y: 580        
+              font_size: 240
+              anchor_x: right
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (player2|games)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 1024
+              y: 235
+              font_size: 240
+              anchor_x: right
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (ball)
+              font_name: Ten_segment
+              color: blue
+              x: 520
+              y: 55        
+              anchor_x: left
+              anchor_y: bottom
+              font_size: 145
+              z: 4
+
+    player2up:
+        widgets:
+            - type: image
+              image: nobs_bg
+              z: 3
+
+            - type: text
+              text: (player1|score)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 0
+              y: 930
+              font_size: 240
+              anchor_x: left
+              anchor_y: bottom
+              z: 4
+                      
+            - type: text
+              text: (player1|gamescore)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 0
+              y: 580        
+              font_size: 240
+              anchor_x: left
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (player1|games)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 0
+              y: 235
+              font_size: 240
+              anchor_x: left
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (player2|score)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 1024
+              y: 930
+              font_size: 240
+              anchor_x: right
+              anchor_y: bottom
+              z: 4
+              animations:
+                  pre_show_slide:
+                    - property: opacity
+                      value: 0
+                      duration: .5s
+                    - property: opacity
+                      value: 1
+                      duration: .5s
+                      repeat: -1
+
+            - type: text
+              text: (player2|gamescore)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 1024
+              y: 580        
+              font_size: 240
+              anchor_x: right
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (player2|games)
+              number_grouping: true
+              min_digits: 2
+              font_name: Ten_segment
+              color: blue
+              x: 1024
+              y: 235
+              font_size: 240
+              anchor_x: right
+              anchor_y: bottom
+              z: 4
+
+            - type: text
+              text: (ball)
+              font_name: Ten_segment
+              color: blue
+              x: 520
+              y: 55        
+              anchor_x: left
+              anchor_y: bottom
+              font_size: 145
+              z: 4
