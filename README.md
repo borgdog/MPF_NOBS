@@ -1,2 +1,0 @@
-# Nobs
-NOBS custom pinball
