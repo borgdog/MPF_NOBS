@@ -245,22 +245,22 @@ shot_groups:
     handa: 
         shots: droptarget_A, droptarget_2, droptarget_3, right_22
         reset_events:
-            ball_starting: 1
+            # ball_starting: 1
             handa_complete: 3s
     handa2:
         shots: right_2
         reset_events:
-            ball_starting: 1
+            # ball_starting: 1
             handa_complete: 3s
     handb:
         shots: droptarget_4, droptarget_5, droptarget_5b, droptarget_6
         reset_events:
-            ball_starting: .5s
+            # ball_starting: .5s
             handb_complete: 3.25s
     handc:
         shots: left_inlane2, droptarget_6b, droptarget_9, right_outlane2
         reset_events:
-            ball_starting: 1.5s
+            # ball_starting: 1.5s
             handc_complete: 3.5s
     handc2:
         shots: left_inlane, right_outlane
@@ -512,10 +512,10 @@ coils:
         pulse_ms: 80
     c_pop_left:
         number: 0-0
-        pulse_ms: 60
+        pulse_ms: 30
     c_pop_right:
         number: 0-1
-        pulse_ms: 60
+        pulse_ms: 30
     c_knocker:
         number: 0-7
         pulse_ms: 60
@@ -557,52 +557,43 @@ autofire_coils:
 drop_targets:
     dt_6:
         switch: s_drop_6
-        reset_coil: c_leftDTreset
     dt_5:
         switch: s_drop_5
-        reset_coil: c_leftDTreset
     dt_5b:
         switch: s_drop_5b
-        reset_coil: c_leftDTreset
     dt_4:
         switch: s_drop_4
-        reset_coil: c_leftDTreset
     dt_ace:
         switch: s_drop_ace
-        reset_coil: c_midDTreset
     dt_2:
         switch: s_drop_2
-        reset_coil: c_midDTreset
     dt_3:
         switch: s_drop_3
-        reset_coil: c_midDTreset
     dt_6r:
         switch: s_drop_6_right
-        reset_coil: c_rightDTreset
     dt_9:
         switch: s_drop_9
-        reset_coil: c_rightDTreset
 # 
 drop_target_banks:
     dtleft:
         drop_targets: dt_6, dt_5, dt_5b, dt_4
         reset_coil: c_leftDTreset
         reset_events:
-            ball_started: 1
+            ball_started: 0.25s
             handb_complete: 2.5s
         
     dtmid:
         drop_targets: dt_ace, dt_2, dt_3
         reset_coil: c_midDTreset
         reset_events:
-            ball_started: 2s
+            ball_started: 0.5s
             handa_complete: 2.5s
 
     dtright:
         drop_targets: dt_6r, dt_9
         reset_coil: c_rightDTreset
         reset_events:
-            ball_started: 3s
+            ball_started: 0.75s
             handc_complete: 2.5s
 #
 flippers:
