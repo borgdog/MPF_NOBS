@@ -1,0 +1,870 @@
+# config_version=5
+# NOBS
+
+lights:
+    l_shootagain:
+        type: grb
+        number: 33 
+        default_on_color: f5f5f5
+    l_handa3:
+        type: grb
+        number: 32
+        default_on_color: yellow
+    l_handa2:
+        type: grb
+        number: 31
+        default_on_color: yellow
+    l_handa2b:
+        type: grb
+        number: 30
+        default_on_color: yellow
+    l_handaa:
+        type: grb
+        number: 29
+        default_on_color: yellow
+    l_rightout:
+        type: grb
+        number: 28
+        default_on_color: red
+    l_handb4:
+        type: grb
+        number: 27
+        default_on_color: green
+    l_handb5b:
+        type: grb
+        number: 26
+        default_on_color: green
+    l_handb5:
+        type: grb
+        number: 25
+        default_on_color: green
+    l_handb6:
+        type: grb
+        number: 24
+        default_on_color: green
+    l_leftin:
+        type: grb
+        number: 23
+        default_on_color: red
+    l_leftout:
+        type: grb
+        number: 22
+        default_on_color: blue
+    l_dpa:
+        type: grb
+        number: 20
+        default_on_color: yellow
+    l_dpb:
+        type: grb
+        number: 19
+        default_on_color: green
+    l_dpc:
+        type: grb
+        number: 21
+        default_on_color: red
+    l_dpd:
+        type: grb
+        number: 18
+        default_on_color: blue
+    l_handc9:
+        type: grb
+        number: 17
+        default_on_color: red
+    l_handc8:
+        type: grb
+        number: 16
+        default_on_color: red
+    l_handc7:
+        type: grb
+        number: 15
+        default_on_color: red
+    l_handc6:
+        type: grb
+        number: 14
+        default_on_color: red
+    l_handd5:
+        type: grb
+        number: 11
+        default_on_color: blue
+    l_handdj:
+        type: grb
+        number: 10
+        default_on_color: blue
+    l_handdq:
+        type: grb
+        number: 9
+        default_on_color: blue
+    l_handdk:
+        type: grb
+        number: 8
+        default_on_color: blue
+    l_star1:
+        type: grb
+        number: 7
+        default_on_color: red
+    l_star2:
+        type: grb
+        number: 6
+        default_on_color: red
+    l_star3:
+        type: grb
+        number: 5
+        default_on_color: red
+    l_star4:
+        type: grb
+        number: 4
+        default_on_color: red
+    l_star5:
+        type: grb
+        number: 3
+        default_on_color: red
+    l_topk:
+        type: grb
+        number: 2
+        default_on_color: blue
+    l_topq:
+        type: grb
+        number: 1
+        default_on_color: blue
+    l_topj:
+        type: grb
+        number: 0
+        default_on_color: blue
+    l_extraball:
+        type: grb
+        number: 12
+        default_on_color: f5f5f5
+    l_right2:
+        type: grb
+        number: 13
+        default_on_color: yellow
+
+
+
+# CRIBBAGE BOARD TRACKING LIGHTS
+
+    #     player1 
+
+    l_p1_1:
+        number: 256
+        default_on_color: red
+    l_p1_2:
+        number: 257
+        default_on_color: red
+    l_p1_3:
+        number: 258
+        default_on_color: red
+    l_p1_4:
+        number: 259
+        default_on_color: red
+    l_p1_5:
+        number: 260
+        default_on_color: red
+    l_p1_6:
+        number: 261
+        default_on_color: red
+    l_p1_7:
+        number: 262
+        default_on_color: red
+    l_p1_8:
+        number: 263
+        default_on_color: red
+    l_p1_9:
+        number: 264
+        default_on_color: red
+    l_p1_10:
+        number: 265
+        default_on_color: red
+    l_p1_11:
+        number: 266
+        default_on_color: red
+    l_p1_12:
+        number: 267
+        default_on_color: red
+    l_p1_13:
+        number: 268
+        default_on_color: red
+    l_p1_14:
+        number: 269
+        default_on_color: red
+    l_p1_15:
+        number: 270
+        default_on_color: red
+    l_p1_16:
+        number: 271
+        default_on_color: red
+    l_p1_17:
+        number: 272
+        default_on_color: red
+    l_p1_18:
+        number: 273
+        default_on_color: red
+    l_p1_19:
+        number: 274
+        default_on_color: red
+    l_p1_20:
+        number: 275
+        default_on_color: red
+    l_p1_21:
+        number: 276
+        default_on_color: red
+    l_p1_22:
+        number: 277
+        default_on_color: red
+    l_p1_23:
+        number: 278
+        default_on_color: red
+    l_p1_24:
+        number: 279
+        default_on_color: red
+    l_p1_25:
+        number: 280
+        default_on_color: red
+    l_p1_26:
+        number: 281
+        default_on_color: red
+    l_p1_27:
+        number: 282
+        default_on_color: red
+    l_p1_28:
+        number: 283
+        default_on_color: red
+    l_p1_29:
+        number: 284
+        default_on_color: red
+    l_p1_30:
+        number: 285
+        default_on_color: red
+    l_p1_31:
+        number: 286
+        default_on_color: red
+    l_p1_32:
+        number: 287
+        default_on_color: red
+    l_p1_33:
+        number: 288
+        default_on_color: red
+    l_p1_34:
+        number: 289
+        default_on_color: red
+    l_p1_35:
+        number: 290
+        default_on_color: red
+    l_p1_36:
+        number: 291
+        default_on_color: red
+    l_p1_37:
+        number: 292
+        default_on_color: red
+    l_p1_38:
+        number: 293
+        default_on_color: red
+    l_p1_39:
+        number: 294
+        default_on_color: red
+    l_p1_40:
+        number: 295
+        default_on_color: red
+    l_p1_41:
+        number: 296
+        default_on_color: red
+    l_p1_42:
+        number: 297
+        default_on_color: red
+    l_p1_43:
+        number: 298
+        default_on_color: red
+    l_p1_44:
+        number: 299
+        default_on_color: red
+    l_p1_45:
+        number: 300
+        default_on_color: red
+    l_p1_46:
+        number: 301
+        default_on_color: red
+    l_p1_47:
+        number: 302
+        default_on_color: red
+    l_p1_48:
+        number: 303
+        default_on_color: red
+    l_p1_49:
+        number: 304
+        default_on_color: red
+    l_p1_50:
+        number: 305
+        default_on_color: red
+    l_p1_51:
+        number: 306
+        default_on_color: red
+    l_p1_52:
+        number: 307
+        default_on_color: red
+    l_p1_53:
+        number: 308
+        default_on_color: red
+    l_p1_54:
+        number: 309
+        default_on_color: red
+    l_p1_55:
+        number: 310
+        default_on_color: red
+    l_p1_56:
+        number: 311
+        default_on_color: red
+    l_p1_57:
+        number: 312
+        default_on_color: red
+    l_p1_58:
+        number: 313
+        default_on_color: red
+    l_p1_59:
+        number: 314
+        default_on_color: red
+    l_p1_60:
+        number: 315
+        default_on_color: red
+    l_p1_61:
+        number: 316
+        default_on_color: red
+    l_p1_62:
+        number: 317
+        default_on_color: red
+    l_p1_63:
+        number: 318
+        default_on_color: red
+    l_p1_64:
+        number: 319
+        default_on_color: red
+    l_p1_65:
+        number: 320
+        default_on_color: red
+    l_p1_66:
+        number: 321
+        default_on_color: red
+    l_p1_67:
+        number: 322
+        default_on_color: red
+    l_p1_68:
+        number: 323
+        default_on_color: red
+    l_p1_69:
+        number: 324
+        default_on_color: red
+    l_p1_70:
+        number: 325
+        default_on_color: red
+    l_p1_71:
+        number: 326
+        default_on_color: red
+    l_p1_72:
+        number: 327
+        default_on_color: red
+    l_p1_73:
+        number: 328
+        default_on_color: red
+    l_p1_74:
+        number: 329
+        default_on_color: red
+    l_p1_75:
+        number: 330
+        default_on_color: red
+    l_p1_76:
+        number: 331
+        default_on_color: red
+    l_p1_77:
+        number: 332
+        default_on_color: red
+    l_p1_78:
+        number: 333
+        default_on_color: red
+    l_p1_79:
+        number: 334
+        default_on_color: red
+    l_p1_80:
+        number: 335
+        default_on_color: red
+    l_p1_81:
+        number: 336
+        default_on_color: red
+    l_p1_82:
+        number: 337
+        default_on_color: red
+    l_p1_83:
+        number: 338
+        default_on_color: red
+    l_p1_84:
+        number: 339
+        default_on_color: red
+    l_p1_85:
+        number: 340
+        default_on_color: red
+    l_p1_86:
+        number: 341
+        default_on_color: red
+    l_p1_87:
+        number: 342
+        default_on_color: red
+    l_p1_88:
+        number: 343
+        default_on_color: red
+    l_p1_89:
+        number: 344
+        default_on_color: red
+    l_p1_90:
+        number: 345
+        default_on_color: red
+    l_p1_91:
+        number: 346
+        default_on_color: red
+    l_p1_92:
+        number: 347
+        default_on_color: red
+    l_p1_93:
+        number: 348
+        default_on_color: red
+    l_p1_94:
+        number: 349
+        default_on_color: red
+    l_p1_95:
+        number: 350
+        default_on_color: red
+    l_p1_96:
+        number: 351
+        default_on_color: red
+    l_p1_97:
+        number: 352
+        default_on_color: red
+    l_p1_98:
+        number: 353
+        default_on_color: red
+    l_p1_99:
+        number: 354
+        default_on_color: red
+    l_p1_100:
+        number: 355
+        default_on_color: red
+    l_p1_101:
+        number: 356
+        default_on_color: red
+    l_p1_102:
+        number: 357
+        default_on_color: red
+    l_p1_103:
+        number: 358
+        default_on_color: red
+    l_p1_104:
+        number: 359
+        default_on_color: red
+    l_p1_105:
+        number: 360
+        default_on_color: red
+    l_p1_106:
+        number: 361
+        default_on_color: red
+    l_p1_107:
+        number: 362
+        default_on_color: red
+    l_p1_108:
+        number: 363
+        default_on_color: red
+    l_p1_109:
+        number: 364
+        default_on_color: red
+    l_p1_110:
+        number: 365
+        default_on_color: red
+    l_p1_111:
+        number: 366
+        default_on_color: red
+    l_p1_112:
+        number: 367
+        default_on_color: red
+    l_p1_113:
+        number: 368
+        default_on_color: red
+    l_p1_114:
+        number: 369
+        default_on_color: red
+    l_p1_115:
+        number: 370
+        default_on_color: red
+    l_p1_116:
+        number: 371
+        default_on_color: red
+    l_p1_117:
+        number: 372
+        default_on_color: red
+    l_p1_118:
+        number: 373
+        default_on_color: red
+    l_p1_119:
+        number: 374
+        default_on_color: red
+    l_p1_120:
+        number: 375
+        default_on_color: red
+
+    #     player2 
+
+    l_p2_1:
+        number: 384
+        default_on_color: blue
+    l_p2_2:
+        number: 385
+        default_on_color: blue
+    l_p2_3:
+        number: 386
+        default_on_color: blue
+    l_p2_4:
+        number: 387
+        default_on_color: blue
+    l_p2_5:
+        number: 388
+        default_on_color: blue
+    l_p2_6:
+        number: 389
+        default_on_color: blue
+    l_p2_7:
+        number: 390
+        default_on_color: blue
+    l_p2_8:
+        number: 391
+        default_on_color: blue
+    l_p2_9:
+        number: 392
+        default_on_color: blue
+    l_p2_10:
+        number: 393
+        default_on_color: blue
+    l_p2_11:
+        number: 394
+        default_on_color: blue
+    l_p2_12:
+        number: 395
+        default_on_color: blue
+    l_p2_13:
+        number: 396
+        default_on_color: blue
+    l_p2_14:
+        number: 397
+        default_on_color: blue
+    l_p2_15:
+        number: 398
+        default_on_color: blue
+    l_p2_16:
+        number: 399
+        default_on_color: blue
+    l_p2_17:
+        number: 400
+        default_on_color: blue
+    l_p2_18:
+        number: 401
+        default_on_color: blue
+    l_p2_19:
+        number: 402
+        default_on_color: blue
+    l_p2_20:
+        number: 403
+        default_on_color: blue
+    l_p2_21:
+        number: 404
+        default_on_color: blue
+    l_p2_22:
+        number: 405
+        default_on_color: blue
+    l_p2_23:
+        number: 406
+        default_on_color: blue
+    l_p2_24:
+        number: 407
+        default_on_color: blue
+    l_p2_25:
+        number: 408
+        default_on_color: blue
+    l_p2_26:
+        number: 409
+        default_on_color: blue
+    l_p2_27:
+        number: 410
+        default_on_color: blue
+    l_p2_28:
+        number: 411
+        default_on_color: blue
+    l_p2_29:
+        number: 412
+        default_on_color: blue
+    l_p2_30:
+        number: 413
+        default_on_color: blue
+    l_p2_31:
+        number: 414
+        default_on_color: blue
+    l_p2_32:
+        number: 415
+        default_on_color: blue
+    l_p2_33:
+        number: 416
+        default_on_color: blue
+    l_p2_34:
+        number: 417
+        default_on_color: blue
+    l_p2_35:
+        number: 418
+        default_on_color: blue
+    l_p2_36:
+        number: 419
+        default_on_color: blue
+    l_p2_37:
+        number: 420
+        default_on_color: blue
+    l_p2_38:
+        number: 421
+        default_on_color: blue
+    l_p2_39:
+        number: 422
+        default_on_color: blue
+    l_p2_40:
+        number: 423
+        default_on_color: blue
+    l_p2_41:
+        number: 424
+        default_on_color: blue
+    l_p2_42:
+        number: 425
+        default_on_color: blue
+    l_p2_43:
+        number: 426
+        default_on_color: blue
+    l_p2_44:
+        number: 427
+        default_on_color: blue
+    l_p2_45:
+        number: 428
+        default_on_color: blue
+    l_p2_46:
+        number: 429
+        default_on_color: blue
+    l_p2_47:
+        number: 430
+        default_on_color: blue
+    l_p2_48:
+        number: 431
+        default_on_color: blue
+    l_p2_49:
+        number: 432
+        default_on_color: blue
+    l_p2_50:
+        number: 433
+        default_on_color: blue
+    l_p2_51:
+        number: 434
+        default_on_color: blue
+    l_p2_52:
+        number: 435
+        default_on_color: blue
+    l_p2_53:
+        number: 436
+        default_on_color: blue
+    l_p2_54:
+        number: 437
+        default_on_color: blue
+    l_p2_55:
+        number: 438
+        default_on_color: blue
+    l_p2_56:
+        number: 439
+        default_on_color: blue
+    l_p2_57:
+        number: 440
+        default_on_color: blue
+    l_p2_58:
+        number: 441
+        default_on_color: blue
+    l_p2_59:
+        number: 442
+        default_on_color: blue
+    l_p2_60:
+        number: 443
+        default_on_color: blue
+    l_p2_61:
+        number: 444
+        default_on_color: blue
+    l_p2_62:
+        number: 445
+        default_on_color: blue
+    l_p2_63:
+        number: 446
+        default_on_color: blue
+    l_p2_64:
+        number: 447
+        default_on_color: blue
+    l_p2_65:
+        number: 448
+        default_on_color: blue
+    l_p2_66:
+        number: 449
+        default_on_color: blue
+    l_p2_67:
+        number: 450
+        default_on_color: blue
+    l_p2_68:
+        number: 451
+        default_on_color: blue
+    l_p2_69:
+        number: 452
+        default_on_color: blue
+    l_p2_70:
+        number: 453
+        default_on_color: blue
+    l_p2_71:
+        number: 454
+        default_on_color: blue
+    l_p2_72:
+        number: 455
+        default_on_color: blue
+    l_p2_73:
+        number: 456
+        default_on_color: blue
+    l_p2_74:
+        number: 457
+        default_on_color: blue
+    l_p2_75:
+        number: 458
+        default_on_color: blue
+    l_p2_76:
+        number: 459
+        default_on_color: blue
+    l_p2_77:
+        number: 460
+        default_on_color: blue
+    l_p2_78:
+        number: 461
+        default_on_color: blue
+    l_p2_79:
+        number: 462
+        default_on_color: blue
+    l_p2_80:
+        number: 463
+        default_on_color: blue
+    l_p2_81:
+        number: 464
+        default_on_color: blue
+    l_p2_82:
+        number: 465
+        default_on_color: blue
+    l_p2_83:
+        number: 466
+        default_on_color: blue
+    l_p2_84:
+        number: 467
+        default_on_color: blue
+    l_p2_85:
+        number: 468
+        default_on_color: blue
+    l_p2_86:
+        number: 469
+        default_on_color: blue
+    l_p2_87:
+        number: 470
+        default_on_color: blue
+    l_p2_88:
+        number: 471
+        default_on_color: blue
+    l_p2_89:
+        number: 472
+        default_on_color: blue
+    l_p2_90:
+        number: 473
+        default_on_color: blue
+    l_p2_91:
+        number: 474
+        default_on_color: blue
+    l_p2_92:
+        number: 475
+        default_on_color: blue
+    l_p2_93:
+        number: 476
+        default_on_color: blue
+    l_p2_94:
+        number: 477
+        default_on_color: blue
+    l_p2_95:
+        number: 478
+        default_on_color: blue
+    l_p2_96:
+        number: 479
+        default_on_color: blue
+    l_p2_97:
+        number: 480
+        default_on_color: blue
+    l_p2_98:
+        number: 481
+        default_on_color: blue
+    l_p2_99:
+        number: 482
+        default_on_color: blue
+    l_p2_100:
+        number: 483
+        default_on_color: blue
+    l_p2_101:
+        number: 484
+        default_on_color: blue
+    l_p2_102:
+        number: 485
+        default_on_color: blue
+    l_p2_103:
+        number: 486
+        default_on_color: blue
+    l_p2_104:
+        number: 487
+        default_on_color: blue
+    l_p2_105:
+        number: 488
+        default_on_color: blue
+    l_p2_106:
+        number: 489
+        default_on_color: blue
+    l_p2_107:
+        number: 490
+        default_on_color: blue
+    l_p2_108:
+        number: 491
+        default_on_color: blue
+    l_p2_109:
+        number: 492
+        default_on_color: blue
+    l_p2_110:
+        number: 493
+        default_on_color: blue
+    l_p2_111:
+        number: 494
+        default_on_color: blue
+    l_p2_112:
+        number: 495
+        default_on_color: blue
+    l_p2_113:
+        number: 496
+        default_on_color: blue
+    l_p2_114:
+        number: 497
+        default_on_color: blue
+    l_p2_115:
+        number: 498
+        default_on_color: blue
+    l_p2_116:
+        number: 499
+        default_on_color: blue
+    l_p2_117:
+        number: 500
+        default_on_color: blue
+    l_p2_118:
+        number: 501
+        default_on_color: blue
+    l_p2_119:
+        number: 502
+        default_on_color: blue
+    l_p2_120:
+        number: 503
+        default_on_color: blue

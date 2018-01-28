@@ -1,5 +1,7 @@
-#config_version=4
+#config_version=5
 # NOBS
+#
+#   Skill shot mode: hit flashing top lane on plunge to be awarded 'heels', 2 pegs.
 
 mode:
     start_events: ball_starting
@@ -12,31 +14,31 @@ mode:
 achievements:
     skill_king:
         show_tokens:
-            leds: l_topK
+            leds: l_topk
         show_when_enabled: off
         show_when_selected: skillflash
         show_when_completed: off
-        complete_events: top_king_hit
+        complete_events: s_ro_king_active
         events_when_completed: award_heels
         reset_events: sw_playfield_active
 
     skill_queen:
         show_tokens:
-            leds: l_topQ
+            leds: l_topq
         show_when_enabled: off
         show_when_selected: skillflash
         show_when_completed: off
-        complete_events: top_queen_hit 
+        complete_events: s_ro_queen_active
         events_when_completed: award_heels  
         reset_events: sw_playfield_active
       
     skill_jack:
         show_tokens:
-            leds: l_topJ
+            leds: l_topj
         show_when_enabled: off
         show_when_selected: skillflash
         show_when_completed: off
-        complete_events: top_jack_hit
+        complete_events: s_ro_jack_active
         events_when_completed: award_heels
         reset_events: sw_playfield_active
 
@@ -53,6 +55,15 @@ achievement_groups:
 slide_player:
     mode_skill_shot_started{current_player.number==1}: player1up
     mode_skill_shot_started{current_player.number==2}: player2up
+
+shows:
+    skillflash:
+    - duration: .25
+      lights:
+        (leds): blue
+    - duration: .25
+      lights:
+        (leds): off
 
 slides:
     player1up:

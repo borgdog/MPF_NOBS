@@ -1,0 +1,76 @@
+#config_version=5
+# NOBS 
+
+virtual_platform_start_active_switches:
+    s_drain
+
+#
+keyboard:
+  z:
+    switch: s_left_flipper
+  "/":
+    switch: s_right_flipper
+  "?":
+    switch: s_right_flipper
+  1:
+    switch: s_drain
+    toggle: true
+  s:
+    switch: s_start
+  3:
+    switch: s_star1
+  4:
+    switch: s_star2
+  5:
+    switch: s_star3
+  6:
+    switch: s_star4
+  7:
+    switch: s_star5
+  9:
+    switch: s_pop_left
+  0:
+    switch: s_pop_right
+  q:
+    switch: s_drop_6
+  w:
+    switch: s_drop_5
+  e:
+    switch: s_drop_5b
+  r:
+    switch: s_drop_4
+  y:
+    switch: s_ro_king
+  u:
+    switch: s_ro_queen
+  i:
+    switch: s_ro_jack
+  o:
+    switch: s_left_outlane
+  p:
+    switch: s_dingwalls
+  d:
+    switch: s_drop_ace
+  f:
+    switch: s_drop_2
+  g:
+    switch: s_drop_3
+  h:
+    switch: s_ro_2
+  k:
+    switch: s_extra_ball
+  l:
+    switch: s_roto
+  x:
+    switch: s_drop_9
+  c:
+    switch: s_drop_6_right
+  v:
+    switch: s_left_inlane
+  b:
+    switch: s_right_outlane
+  m:
+    switch: s_sling 
+  t:
+    switch: s_tiltbob
+#

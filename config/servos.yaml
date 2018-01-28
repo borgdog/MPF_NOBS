@@ -1,0 +1,79 @@
+#config_version=5
+# NOBS 
+
+pololu_maestro:
+     port: COM4
+     servo_min: 3968    # 992 in pololu controller software
+     servo_max: 8600    # 2150 in pololu 
+     debug: true
+
+servos:
+    servo_lout:
+        servo_min: 0.0        # 992 in pololu
+        servo_max: 0.352      # 1400 in pololu
+        number: 1
+        positions:
+            0.0: servo_lout_closed
+            1.0: servo_lout_open
+        reset_position: 0.0
+        reset_events: 
+            handd2_complete: 2s
+            ball_started: 0
+
+    servo_rout:
+        servo_min: 0.0      # 992 in pololu
+        servo_max: 0.98    # 2150 in Pololu---testing slightly lower
+        number: 2
+        positions:
+            0.0: servo_rout_closed
+            1.0: servo_rout_open
+        reset_position: 0.0
+        reset_events: ball_started
+        
+    servo_roto:
+        servo_min: 0.0          # 992 in pololu
+        servo_max: 0.585       # 1670 in pololu
+        number: 0
+        positions:
+            0.0: roto_1           
+            0.026: roto_2
+            0.053: roto_3
+            0.079: roto_4
+            0.105: roto_5
+            0.132: roto_6
+            0.158: roto_7
+            0.184: roto_8
+            0.211: roto_9
+            0.237: roto_10
+            0.263: roto_11
+            0.289: roto_12
+            0.316: roto_13
+            0.342: roto_14
+            0.368: roto_15
+            0.395: roto_16
+            0.421: roto_17
+            0.447: roto_18
+            0.474: roto_19
+            0.5: roto_20
+            0.526: roto_21
+            0.553: roto_22
+            0.579: roto_23
+            0.605: roto_24
+            0.632: roto_25
+            0.658: roto_26
+            0.684: roto_27
+            0.711: roto_28
+            0.737: roto_29
+            0.763: roto_30
+            0.789: roto_31
+            0.816: roto_32
+            0.842: roto_33
+            0.868: roto_34
+            0.895: roto_35
+            0.921: roto_36
+            0.947: roto_37
+            0.974: roto_38
+            1.0: roto_39
+
+        reset_events: service_mode_entered
+        reset_position: 0.0

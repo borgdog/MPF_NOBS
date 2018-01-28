@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 # NOBS 
 
 mode:
@@ -6,7 +6,6 @@ mode:
     stop_events: extra_ball_hit
     priority: 100
 
-# code to open right outlane gate needed here
 
 shots:
     extra_ball:

@@ -1,0 +1,11 @@
+player1_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
+  dictitems:
+    value: 236
+player1games:
+  value: 0
+player2_score:
+  value: 6
+player2games:
+  value: 0
+roto:
+  value: 1

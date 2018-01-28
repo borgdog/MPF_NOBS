@@ -1,30 +1,39 @@
-#config_version=4
+#config_version=5
 # NOBS
 
 mode:
-    start_events: ball_started
+    start_events: ball_starting
     priority: 100
-#
-logic_blocks:
-    counters:
-        ebcounter:
-            count_events: top_king_lit_hit, top_queen_lit_hit, top_jack_lit_hit, right_2_lit_hit, left_inlane_lit_hit, right_outlane_lit_hit
-            starting_count: 0
-            count_complete_value: 6
-            direction: up
-            events_when_complete:  
-                extra_ball_lit
-            reset_on_complete: false
 
-extra_balls:
-    eb:
-        award_events: extra_ball_hit
-        reset_events: ball_started
-#
+counters:
+    ebcounter:
+        count_events: top_king_lit_hit, top_queen_lit_hit, top_jack_lit_hit, right_2_lit_hit, left_inlane_lit_hit, right_outlane_lit_hit
+        starting_count: 0
+        count_complete_value: 6
+        direction: up
+        events_when_complete:  
+            extra_ball_lit
+        reset_on_complete: false
+        restart_events: ball_save_bs_disabled
+
+ball_saves:
+    bs:
+        enable_events: extra_ball_hit
 
 scoring:
 
-    player_score:     #add gamescore when scoring player 1
+    star1_hit{device.achievements.litstar1.state=='completed'}:
+        score: 1 * current_player.dpegs
+    star2_hit{device.achievements.litstar2.state=='completed'}:
+        score: 1 * current_player.dpegs
+    star3_hit{device.achievements.litstar3.state=='completed'}:
+        score: 1 * current_player.dpegs
+    star4_hit{device.achievements.litstar4.state=='completed'}:
+        score: 1 * current_player.dpegs
+    star5_hit{device.achievements.litstar5.state=='completed'}:
+        score: 1 * current_player.dpegs
+
+    player_score:     #add gamescore when scoring
         gamescore:
             score: change
             action: add
@@ -170,26 +179,248 @@ scoring:
         score: 2 * current_player.dpegs
     top_jack_hit{machine.roto==11 or machine.roto==5}:
         score: 2 * current_player.dpegs
-   
-    star1_hit{current_player.top_king3_p_offon==1}:
-        score: 1 * current_player.dpegs
-    star2_hit{current_player.top_queen3_p_offon==1}:
-        score: 1 * current_player.dpegs
-    star3_hit{current_player.top_jack3_p_offon==1}:
-        score: 1 * current_player.dpegs
-    star4_hit{current_player.right_outlane3_p_offon==1}:
-        score: 1 * current_player.dpegs
-    star5_hit{current_player.left_inlane3_p_offon==1}:
-        score: 1 * current_player.dpegs
+
+
+shots:
+
+    dingwalls:
+        switch: s_dingwalls
+    left_outlane:
+        switch: s_left_outlane
+        show_tokens:
+            led: l_leftout
+        profile: p_onoff
+    left_outlane2:
+        switch: s_left_outlane
+        show_tokens:
+            led: l_handd5
+        profile: p_offon
+    left_inlane:
+        switch: s_left_inlane
+        show_tokens:
+            led: l_leftin
+        profile: p_onoff
+    left_inlane2:
+        switch: s_left_inlane
+        show_tokens:
+            lights: l_handc7
+        profile: p_offon
+    droptarget_6:
+        switch: s_drop_6
+        show_tokens:
+            led: l_handB6
+        profile: p_offon
+    droptarget_5:
+        switch: s_drop_5
+        show_tokens:
+            led: l_handB5
+        profile: p_offon
+    droptarget_5b:
+        switch: s_drop_5b
+        show_tokens:
+            led: l_handB5b
+        profile: p_offon
+    droptarget_4:    
+        switch: s_drop_4
+        show_tokens:
+            led: l_handB4
+        profile: p_offon
+    droptarget_6b:
+        switch: s_drop_6_right
+        show_tokens:
+            led: l_handc6
+        profile: p_offon
+    droptarget_9:
+        switch: s_drop_9
+        show_tokens:
+            led: l_handc9
+        profile: p_offon
+    right_outlane:
+        switch: s_right_outlane
+        show_tokens:
+            led: l_rightout
+        profile: p_onoff
+    right_outlane2:
+        switch: s_right_outlane
+        show_tokens:
+            lights: l_handc8
+        profile: p_offon
+    droptarget_A:    
+        switch: s_drop_ace
+        show_tokens:
+            led: l_handAa
+        profile: p_offon
+    droptarget_2:    
+        switch: s_drop_2
+        show_tokens:
+            led: l_handA2
+        profile: p_offon
+    droptarget_3:    
+        switch: s_drop_3
+        show_tokens:
+            led: l_handA3
+        profile: p_offon
+    right_2:
+        switch: s_ro_2
+        show_tokens:
+            led: l_right2
+        profile: p_onoff
+    right_22:
+        switch: s_ro_2
+        show_tokens:
+            led: l_handA2b
+        profile: p_offon
+    top_king:
+        switch: s_ro_king
+        show_tokens:
+            led: l_topK
+        profile: p_onoff
+    top_king2:
+        switch: s_ro_king
+        show_tokens:
+            lights: l_handdk
+        profile: p_offon
+    top_queen:
+        switch: s_ro_queen
+        show_tokens:
+            led: l_topQ
+        profile: p_onoff
+    top_queen2:
+        switch: s_ro_queen
+        show_tokens:
+            lights: l_handdq
+        profile: p_offon
+    top_jack:
+        switch: s_ro_jack
+        show_tokens:
+            led: l_topJ
+        profile: p_onoff
+    top_jack2:
+        switch: s_ro_jack
+        show_tokens:
+            lights: l_handdj
+        profile: p_offon
+    star1:
+        switch: s_star1
+    star2:
+        switch: s_star2
+    star3:
+        switch: s_star3
+    star4:
+        switch: s_star4
+    star5:
+        switch: s_star5
+    extraball:
+        switch: s_extra_ball
+    rototarget:
+        switch: s_roto
+    slings:
+        switch: s_sling
 
 #
+#
+shot_groups:
+    handa: 
+        shots: droptarget_A, droptarget_2, droptarget_3, right_22
+        reset_events:
+            ball_started: 1
+            handa_complete: 3s
+    handa2:
+        shots: right_2
+        reset_events:
+            ball_started: 1
+            handa_complete: 3s
+    handb:
+        shots: droptarget_4, droptarget_5, droptarget_5b, droptarget_6
+        reset_events:
+            ball_started: .5s
+            handb_complete: 3.25s
+    handc:
+        shots: left_inlane2, droptarget_6b, droptarget_9, right_outlane2
+        reset_events:
+            ball_started: 1.5s
+            handc_complete: 3.5s
+    handc2:
+        shots: left_inlane, right_outlane
+        reset_events:
+            ball_started: 1.5s
+            handc_complete: 3.5s
+    handd:
+        shots: left_outlane, top_jack, top_queen, top_king
+        reset_events:
+            ball_started: 1s
+            handd_complete: 3.75s
+    handd2:
+        shots: left_outlane2, top_jack2, top_queen2, top_king2
+        reset_events:
+            ball_started: 1s
+            handd_complete: 3.75s
+#
+shot_profiles:
+    p_onoff:
+        states:
+            - name: lit # step 1
+              show: on
+            - name: unlit  # step 2
+              show: off
+        loop: no
+    p_offon:
+        states:
+            - name: unlit # step 1
+              show: off
+            - name: lit  # step 2
+              show: on
+        loop: no
+#
 achievements:
+
+    litstar1:
+        start_events: mode_base_started, ball_started
+        complete_events: top_king_lit_hit
+        reset_events: ball_drain
+        show_tokens:
+            lights: l_star1
+        show_when_started: off
+        show_when_completed: on
+    litstar2:
+        start_events: mode_base_started, ball_started
+        complete_events: top_queen_lit_hit
+        reset_events: ball_drain
+        show_tokens:
+            lights: l_star2
+        show_when_started: off
+        show_when_completed: on
+    litstar3:
+        start_events: mode_base_started, ball_started
+        complete_events: top_jack_lit_hit
+        reset_events: ball_drain
+        show_tokens:
+            lights: l_star3
+        show_when_started: off
+        show_when_completed: on
+    litstar4:
+        start_events: mode_base_started, ball_started
+        complete_events: right_outlane_lit_hit
+        reset_events: ball_drain
+        show_tokens:
+            lights: l_star4
+        show_when_started: off
+        show_when_completed: on
+    litstar5:
+        start_events: mode_base_started, ball_started
+        complete_events: left_inlane_lit_hit
+        reset_events: ball_drain
+        show_tokens:
+            lights: l_star5
+        show_when_started: off
+        show_when_completed: on
+
     dp_handa:
         start_events: mode_base_started, ball_started
         complete_events: handa_complete
         reset_events: ball_drain
         show_tokens:
-            leds: l_DPa
+            lights: l_DPa
         show_when_started: off
         show_when_completed: on
     dp_handb:
@@ -197,7 +428,7 @@ achievements:
         complete_events: handb_complete
         reset_events: ball_drain
         show_tokens:
-            leds: l_DPb
+            lights: l_DPb
         show_when_started: off
         show_when_completed: on
     dp_handc:
@@ -205,7 +436,7 @@ achievements:
         complete_events: handc_complete
         reset_events: ball_drain
         show_tokens:
-            leds: l_DPc
+            lights: l_DPc
         show_when_started: off
         show_when_completed: on
     dp_handd:
@@ -213,7 +444,7 @@ achievements:
         complete_events: handd_complete
         reset_events: ball_drain
         show_tokens:
-            leds: l_DPd
+            lights: l_DPd
         show_when_started: off
         show_when_completed: on
 
@@ -228,6 +459,16 @@ slide_player:
 
 show_player:
 
+    ball_save_bs_disabled:
+        shoot_again:
+            action: stop
+        shootagain_flash: 
+            loops: -1
+
+    sw_playfield_active:
+        shootagain_flash: 
+            action: stop
+    
     left_outlane_hit:
         open_left: 
             loops: 0
@@ -266,35 +507,43 @@ show_player:
 
 shows:
     open_left:
-    - time: 2
+    - time: 1
       events:
         servo_lout_open
+      
 
     open_right:
-    - time: 2
+    - time: 1
       events:
         servo_rout_open
 
     show_flash:
     - duration: .25
-      leds:
+      lights:
         (led): (color1)
     - duration: .25
-      leds:
+      lights:
         (led): off
-
+    
+    score_flash:
+    - duration: .25
+      lights:
+        (led): on
+    - duration: .25
+      lights:
+        (led): off
+ 
     shoot_again:
     - time: 0
-      leds:
+      lights:
         l_shootagain: white
       duration: -1
 
-    skillflash:
+    shootagain_flash:
     - duration: .25
-      leds:
-        (leds): blue
+      lights:
+        l_shootagain: white
     - duration: .25
-      leds:
-        (leds): off
-# 
+      lights:
+        l_shootagain: off
 
