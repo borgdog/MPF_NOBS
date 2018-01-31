@@ -11,11 +11,11 @@
           z: 1
         
         - type: text
-          x: 0
-          y: 930         
+          x: 620
+          y: 644         
           font_size: 240
           font_name: Ten_segment
-          anchor_x: left
+          anchor_x: right
           anchor_y: bottom
           text: PRE
           color: blue
@@ -31,8 +31,8 @@
                 repeat: -1
 
         - type: text
-          x: 1024
-          y: 930          
+          x: 1230
+          y: 644          
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
@@ -56,8 +56,8 @@
           font_name: Ten_segment  
           anchor_x: right
           anchor_y: bottom    
-          x: 495
-          y: 580
+          x: 620
+          y: 84
           z: 3
           color: blue
           animations:
@@ -76,8 +76,8 @@
           font_name: Ten_segment  
           anchor_x: right
           anchor_y: bottom    
-          x: 1024
-          y: 580
+          x: 1230
+          y: 84
           z: 3
           color: blue
           animations:
@@ -90,103 +90,31 @@
                 duration: .25s
                 repeat: -1
 
-- duration: 7
+- duration: 4
   slides:
     attract_slide_2:
       widgets:
         - type: image
           image: nobs_bg
           z: 1
-        - type: text
-          x: 0
-          y: 580         
-          font_size: 240
-          font_name: Ten_segment
-          anchor_x: left
-          anchor_y: bottom
-          text: CHA
-          color: blue
-          z: 3
 
         - type: text
-          x: 1024
-          y: 580         
+          x: 620
+          y: 84
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
-          anchor_y: bottom
-          text: MPS
-          color: blue
-          z: 3
-
-        - type: text
-          text: (machine|score1_name)
-          font_size: 240
-          font_name: Ten_segment  
-          anchor_x: left
-          anchor_y: bottom    
-          x: 0
-          y: 930
-          z: 3
-          color: blue
-
-        - type: text
-          text: (machine|score1_value)
-          font_size: 240
-          font_name: Ten_segment  
-          anchor_x: right
-          anchor_y: bottom    
-          x: 1024
-          y: 930
-          z: 3
-          color: blue
-
-        - type: text
-          text: (machine|games1_name) 
-          font_size: 240
-          font_name: Ten_segment  
-          anchor_x: left
-          anchor_y: bottom    
-          x: 0
-          y: 235
-          z: 3
-          color: blue
-
-        - type: text
-          text: (machine|games1_value) 
-          font_size: 240
-          font_name: Ten_segment  
-          anchor_x: right
-          anchor_y: bottom    
-          x: 1024
-          y: 235
-          z: 3
-          color: blue
-
-- duration: 4
-  slides:
-    attract_slide_3:
-      widgets:
-        - type: image
-          image: nobs_bg
-          z: 1
-        - type: text
-          x: 0
-          y: 235
-          font_size: 240
-          font_name: Ten_segment
-          anchor_x: left
           anchor_y: bottom
           text: (machine|player1games)
           color: blue
           z: 3
 
         - type: text
-          x: 0
-          y: 930
+          x: 620
+          y: 644
           font_size: 240
           font_name: Ten_segment
-          anchor_x: left
+          anchor_x: right
           anchor_y: bottom
           text: (machine|player1_score)
           color: blue
@@ -198,8 +126,8 @@
           font_name: Ten_segment  
           anchor_x: right
           anchor_y: bottom    
-          x: 1024
-          y: 235
+          x: 1230
+          y: 84
           z: 3
           color: blue
 
@@ -209,7 +137,91 @@
           font_name: Ten_segment  
           anchor_x: right
           anchor_y: bottom    
-          x: 1024
-          y: 930
+          x: 1230
+          y: 644
           z: 3
           color: blue
+
+
+- duration: 2
+  slides:
+    attract_slide_3:
+      widgets:
+        - type: image
+          image: nobs_bg
+          z: 1
+
+        - type: text
+          x: 620
+          y: 644         
+          font_size: 240
+          font_name: Ten_segment
+          anchor_x: right
+          anchor_y: bottom
+          text: CHA
+          color: blue
+          z: 3
+
+        - type: text
+          x: 1230
+          y: 644         
+          font_size: 240
+          font_name: Ten_segment
+          anchor_x: right
+          anchor_y: bottom
+          text: MPS
+          color: blue
+          z: 3
+
+- duration: 4
+  slides:
+    attract_slide_4:
+      widgets:
+        - type: image
+          image: nobs_bg
+          z: 1
+
+        - type: text
+          text: (machine|score1_name)
+          font_size: 240
+          font_name: Ten_segment  
+          anchor_x: right
+          anchor_y: bottom    
+          x: 620
+          y: 644
+          z: 3
+          color: blue
+
+        - type: text
+          text: (machine|score1_value)
+          font_size: 240
+          font_name: Ten_segment  
+          anchor_x: right
+          anchor_y: bottom    
+          x: 1230
+          y: 644
+          z: 3
+          color: blue
+
+        - type: text
+          text: (machine|games1_name) 
+          font_size: 240
+          font_name: Ten_segment  
+          anchor_x: right
+          anchor_y: bottom    
+          x: 620
+          y: 84
+          z: 3
+          color: blue
+
+        - type: text
+          text: (machine|games1_value) 
+          font_size: 240
+          font_name: Ten_segment  
+          anchor_x: right
+          anchor_y: bottom    
+          x: 1230
+          y: 84
+          z: 3
+          color: blue
+

@@ -79,10 +79,10 @@ slides:
               min_digits: 2
               font_name: Ten_segment
               color: blue
-              x: 0
-              y: 930
+              x: 620
+              y: 644
               font_size: 240
-              anchor_x: left
+              anchor_x: right
               anchor_y: bottom
               z: 4
               animations:
@@ -96,28 +96,15 @@ slides:
                       repeat: -1
                       
             - type: text
-              text: (player1|gamescore)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 0
-              y: 580        
-              font_size: 240
-              anchor_x: left
-              anchor_y: bottom
-              z: 4
-
-            - type: text
               text: (player1|games)
               number_grouping: true
               min_digits: 2
               font_name: Ten_segment
               color: blue
-              x: 0
-              y: 235
+              x: 620
+              y: 84
               font_size: 240
-              anchor_x: left
+              anchor_x: right
               anchor_y: bottom
               z: 4
 
@@ -127,21 +114,8 @@ slides:
               min_digits: 2
               font_name: Ten_segment
               color: blue
-              x: 1024
-              y: 930
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
-
-            - type: text
-              text: (player2|gamescore)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 1024
-              y: 580        
+              x: 1230
+              y: 644
               font_size: 240
               anchor_x: right
               anchor_y: bottom
@@ -153,8 +127,8 @@ slides:
               min_digits: 2
               font_name: Ten_segment
               color: blue
-              x: 1024
-              y: 235
+              x: 1230
+              y: 84
               font_size: 240
               anchor_x: right
               anchor_y: bottom
@@ -164,9 +138,9 @@ slides:
               text: (ball)
               font_name: Ten_segment
               color: blue
-              x: 520
-              y: 55        
-              anchor_x: left
+              x: 1230
+              y: 404       
+              anchor_x: right
               anchor_y: bottom
               font_size: 145
               z: 4
@@ -183,36 +157,23 @@ slides:
               min_digits: 2
               font_name: Ten_segment
               color: blue
-              x: 0
-              y: 930
+              x: 620
+              y: 644
               font_size: 240
-              anchor_x: left
+              anchor_x: right
               anchor_y: bottom
               z: 4
                       
-            - type: text
-              text: (player1|gamescore)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 0
-              y: 580        
-              font_size: 240
-              anchor_x: left
-              anchor_y: bottom
-              z: 4
-
             - type: text
               text: (player1|games)
               number_grouping: true
               min_digits: 2
               font_name: Ten_segment
               color: blue
-              x: 0
-              y: 235
+              x: 620
+              y: 84
               font_size: 240
-              anchor_x: left
+              anchor_x: right
               anchor_y: bottom
               z: 4
 
@@ -222,8 +183,8 @@ slides:
               min_digits: 2
               font_name: Ten_segment
               color: blue
-              x: 1024
-              y: 930
+              x: 1230
+              y: 644
               font_size: 240
               anchor_x: right
               anchor_y: bottom
@@ -238,18 +199,6 @@ slides:
                       duration: .5s
                       repeat: -1
 
-            - type: text
-              text: (player2|gamescore)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 1024
-              y: 580        
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
 
             - type: text
               text: (player2|games)
@@ -257,8 +206,8 @@ slides:
               min_digits: 2
               font_name: Ten_segment
               color: blue
-              x: 1024
-              y: 235
+              x: 1230
+              y: 84
               font_size: 240
               anchor_x: right
               anchor_y: bottom
@@ -268,9 +217,9 @@ slides:
               text: (ball)
               font_name: Ten_segment
               color: blue
-              x: 520
-              y: 55        
-              anchor_x: left
+              x: 1230
+              y: 404        
+              anchor_x: right
               anchor_y: bottom
               font_size: 145
               z: 4

@@ -27,7 +27,7 @@ class RotoMove(Mode):
 
         self.log.info('rotopos end -> '+str(self.machine.get_machine_var('rotopos')))
 
-        self.delay.add(name='move_now', ms=1000, callback=self.reallymove) #move the roto after 1 second
+        self.delay.add(name='move_now', ms=500, callback=self.reallymove) #move the roto after 1/2 second
      
     def reallymove(self, **kwargs):
         if self.machine.get_machine_var('rotopos') > 26:

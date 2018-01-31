@@ -45,16 +45,16 @@ slides:
       font_name: Ten_segment
       text: P(player_num)
       color: blue
-      x: 0
-      y: 930    
+      x: 620
+      y: 84    
       z: 3
-      anchor_x: left
+      anchor_x: right
       anchor_y: bottom
 
 
     - type: text
-      x: 1024
-      y: 580    
+      x: 1230
+      y: 644    
       font_size: 240
       font_name: Ten_segment
       anchor_x: right
@@ -65,17 +65,20 @@ slides:
 
     - type: text_input
       key: high_score
-      char_list: "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+      char_list: "ABCDEFGHIJKLMNOPQRSTUVWXYZ_ "
       font_name: Ten_segment
+      max_chars: 3
+      # dynamic_x: False
+      # dynamic_x_pad: 190
       color: blue
-      x: 545
-      y: 930
+      x: 660
+      y: 84
       font_size: 240
       anchor_x: left
       anchor_y: bottom
-      z: 3
+      z: 4
       animations:
-        pre_show_slide:
+        show_slide:
           - property: opacity
             value: 0
             duration: .5s
@@ -91,8 +94,8 @@ slides:
       font_name: Ten_segment  
       anchor_x: left
       anchor_y: bottom
-      x: 545
-      y: 930
+      x: 660
+      y: 84
       color: blue
       z: 3
 
@@ -106,10 +109,10 @@ slides:
       text: (player_name)
       font_size: 240
       font_name: Ten_segment  
-      anchor_x: left
+      anchor_x: right
       anchor_y: bottom    
-      x: 0
-      y: 930
+      x: 620
+      y: 84
       z: 3
       color: blue
       animations:
@@ -128,8 +131,8 @@ slides:
       font_name: Ten_segment  
       anchor_x: right
       anchor_y: bottom    
-      x: 1024
-      y: 930
+      x: 1230
+      y: 84
       z: 3
       color: blue
       animations:
@@ -143,8 +146,8 @@ slides:
           repeat: true
           
     - type: text
-      x: 1024
-      y: 580
+      x: 1230
+      y: 644
       font_size: 240
       font_name: Ten_segment
       anchor_x: right

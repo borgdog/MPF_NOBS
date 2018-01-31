@@ -2,15 +2,15 @@
 # NOBS 
 
 mode:
-    start_events: ball_started
+    start_events: ball_starting
     priority: 200
     code: rotomove.RotoMove
 
 counters:
     rotocount:
         count_events: dingwalls_hit, slings_hit
-        starting_count: 3
-        count_complete_value: 9
+        starting_count: 4
+        count_complete_value: 11
         direction: up
         reset_on_complete: true
         persist_state: true
@@ -29,6 +29,9 @@ scoring:
         score: 10 * current_player.dpegs
 
 event_player:
+
+    game_started:
+        roto_(machine.rotopos)
 
     machine_var_roto:
         roto_(machine.rotopos)

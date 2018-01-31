@@ -1,18 +1,21 @@
 player1_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
   dictitems:
+    value: 5
+player1games: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
+  dictitems:
     value: 0
-player1games:
-  value: 0
 player2_score: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
   dictitems:
-    value: 44
-player2games:
-  value: 0
-roto:
-  value: 1
+    value: 2
+player2games: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
+  dictitems:
+    value: 0
+roto: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
+  dictitems:
+    value: 6
 rotodir: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
   dictitems:
     value: 1
 rotopos: !!python/object/new:mpf.core.case_insensitive_dict.CaseInsensitiveDict
   dictitems:
-    value: 1
+    value: 6

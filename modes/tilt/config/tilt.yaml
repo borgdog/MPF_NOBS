@@ -20,19 +20,19 @@ slides:
   tilt_warning1:
     widgets:
         - type: text
-          x: 0
-          y: 580          
+          x: 620
+          y: 644          
           font_size: 240
           font_name: Ten_segment
-          anchor_x: left
+          anchor_x: right
           anchor_y: bottom
           text: DAN
           color: blue
           z: 3
 
         - type: text
-          x: 1024
-          y: 580         
+          x: 1230
+          y: 644         
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
@@ -40,24 +40,24 @@ slides:
           text: GER
           color: blue
           z: 3
-    expire: 1s
+    expire: 1.5s
 
   tilt_warning2:
     widgets:
         - type: text
-          x: 0
-          y: 580          
+          x: 620
+          y: 644          
           font_size: 240
           font_name: Ten_segment
-          anchor_x: left
+          anchor_x: right
           anchor_y: bottom
           text: DAN
           color: blue
           z: 3
 
         - type: text
-          x: 1024
-          y: 580          
+          x: 1230
+          y: 644          
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
@@ -70,10 +70,10 @@ slides:
           text: DAN
           font_size: 240
           font_name: Ten_segment  
-          anchor_x: left
+          anchor_x: right
           anchor_y: bottom    
-          x: 0
-          y: 930
+          x: 620
+          y: 84
           z: 3
           color: blue
           expire: 1s
@@ -84,19 +84,20 @@ slides:
           font_name: Ten_segment  
           anchor_x: right
           anchor_y: bottom    
-          x: 1024
-          y: 930
+          x: 1230
+          y: 84
           z: 3
           color: blue
           expire: 1s
     expire: 2s
+
   tilt_slide:
         - type: text
-          x: 0
-          y: 580          
+          x: 620
+          y: 644          
           font_size: 240
           font_name: Ten_segment
-          anchor_x: left
+          anchor_x: right
           anchor_y: bottom
           text: " TI"
           color: blue
@@ -112,8 +113,8 @@ slides:
                 repeat: -1
 
         - type: text
-          x: 1024
-          y: 580         
+          x: 1230
+          y: 644         
           font_size: 240
           font_name: Ten_segment
           anchor_x: right

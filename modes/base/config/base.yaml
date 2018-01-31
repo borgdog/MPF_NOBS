@@ -20,6 +20,16 @@ ball_saves:
     bs:
         enable_events: extra_ball_hit
 
+timers:
+    ejecttimer:
+        start_running: True
+        start_value: 4 if current_player.ball==1 and current_player.number==1 else 1
+        end_value: 0
+        direction: down
+        tick_interval: 0.5s
+        debug: true
+        
+
 scoring:
 
     star1_hit{device.achievements.litstar1.state=='completed'}:
@@ -323,37 +333,37 @@ shot_groups:
     handa: 
         shots: droptarget_A, droptarget_2, droptarget_3, right_22
         reset_events:
-            ball_started: 1
+            ball_started: 0
             handa_complete: 3s
     handa2:
         shots: right_2
         reset_events:
-            ball_started: 1
+            ball_started: 0
             handa_complete: 3s
     handb:
         shots: droptarget_4, droptarget_5, droptarget_5b, droptarget_6
         reset_events:
-            ball_started: .5s
+            ball_started: 0
             handb_complete: 3.25s
     handc:
         shots: left_inlane2, droptarget_6b, droptarget_9, right_outlane2
         reset_events:
-            ball_started: 1.5s
+            ball_started: 0
             handc_complete: 3.5s
     handc2:
         shots: left_inlane, right_outlane
         reset_events:
-            ball_started: 1.5s
+            ball_started: 0
             handc_complete: 3.5s
     handd:
         shots: left_outlane, top_jack, top_queen, top_king
         reset_events:
-            ball_started: 1s
+            ball_started: 0
             handd_complete: 3.75s
     handd2:
         shots: left_outlane2, top_jack2, top_queen2, top_king2
         reset_events:
-            ball_started: 1s
+            ball_started: 0
             handd_complete: 3.75s
 #
 shot_profiles:

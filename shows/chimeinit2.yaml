@@ -16,4 +16,4 @@
     c_chime10: pulse
 - time: 820ms
   coils:
-    c_chime100: pulse
+    c_chime1000: pulse
