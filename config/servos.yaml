@@ -7,9 +7,6 @@ pololu_maestro:
      servo_max: 8600    # 2150 in pololu 
      debug: true
 
-event_player:
-    reset_complete:
-        roto_(machine.rotopos)
 
 servos:
     servo_lout:

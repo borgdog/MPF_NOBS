@@ -6,10 +6,10 @@
     l_shootagain: white
 - duration: 1
   lights:
-    l_handA3: yellow
-    l_handA2: yellow
-    l_handA2b: yellow
-    l_handAa: yellow
+    l_handa3: yellow
+    l_handa2: yellow
+    l_handa2b: yellow
+    l_handaa: yellow
 - duration: 1
   lights:
     l_leftout: blue
@@ -21,10 +21,10 @@
     l_rightout: red
 - duration: 1
   lights:
-    l_DPa: yellow
-    l_DPb: green
-    l_DPc: red
-    l_DPd: blue
+    l_dpa: yellow
+    l_dpb: green
+    l_dpc: red
+    l_dpd: blue
     l_handc9: red
     l_handc8: red
     l_handc7: red
@@ -40,10 +40,10 @@
   lights:
     l_star1: red
     l_extraball: white
-    l_handA3: black
-    l_handA2: black
-    l_handA2b: black
-    l_handAa: black
+    l_handa3: black
+    l_handa2: black
+    l_handa2b: black
+    l_handaa: black
 - duration: 1
   lights:
     l_star2: red
@@ -68,10 +68,10 @@
 - duration: 1
   lights:
     l_star4: red
-    l_DPa: black
-    l_DPb: black
-    l_DPc: black
-    l_DPd: black
+    l_dpa: black
+    l_dpb: black
+    l_dpc: black
+    l_dpd: black
     l_handc9: black
     l_handc8: black
     l_handc7: black
@@ -85,9 +85,9 @@
     l_handd5: black
 - duration: 1
   lights:
-    L_topK: blue
-    L_topQ: blue
-    L_topJ: blue
+    l_topk: blue
+    l_topq: blue
+    l_topj: blue
     l_star1: black
     l_extraball: black
 - duration: 1
@@ -105,15 +105,15 @@
     l_star5: black
 - duration: 6
   lights:
-    L_topK: black
-    L_topQ: black
-    L_topJ: black
+    l_topk: black
+    l_topq: black
+    l_topj: black
 
 - duration: 1
   lights:
-    L_topK: blue
-    L_topQ: blue
-    L_topJ: blue
+    l_topk: blue
+    l_topq: blue
+    l_topj: blue
 - duration: 1
   lights:
     l_star5: red
@@ -127,9 +127,9 @@
   lights:
     l_star2: red
     l_right2: yellow
-    L_topK: black
-    L_topQ: black
-    L_topJ: black
+    l_topk: black
+    l_topq: black
+    l_topj: black
 - duration: 1
   lights:
     l_star1: red
@@ -144,10 +144,10 @@
     l_star4: black
 - duration: 1
   lights:
-    l_DPa: yellow
-    l_DPb: green
-    l_DPc: red
-    l_DPd: blue
+    l_dpa: yellow
+    l_dpb: green
+    l_dpc: red
+    l_dpd: blue
     l_handc9: red
     l_handc8: red
     l_handc7: red
@@ -166,10 +166,10 @@
     l_right2: black
 - duration: 1
   lights:
-    l_handA3: yellow
-    l_handA2: yellow
-    l_handA2b: yellow
-    l_handAa: yellow
+    l_handa3: yellow
+    l_handa2: yellow
+    l_handa2b: yellow
+    l_handaa: yellow
     l_star1: black
     l_extraball: black
 - duration: 1
@@ -181,10 +181,10 @@
     l_handd5: black
 - duration: 1
   lights:
-    l_DPa: black
-    l_DPb: black
-    l_DPc: black
-    l_DPd: black
+    l_dpa: black
+    l_dpb: black
+    l_dpc: black
+    l_dpd: black
     l_handc9: black
     l_handc8: black
     l_handc7: black
@@ -200,10 +200,10 @@
     l_rightout: black
 - duration: 1
   lights:
-    l_handA3: black
-    l_handA2: black
-    l_handA2b: black
-    l_handAa: black
+    l_handa3: black
+    l_handa2: black
+    l_handa2b: black
+    l_handaa: black
 - duration: 1
   lights:
     l_shootagain: black

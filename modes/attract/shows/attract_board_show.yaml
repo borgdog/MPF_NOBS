@@ -1,0 +1,725 @@
+#show_version=5
+# NOBS
+
+- duration: 1
+  lights:
+    l_p1_18: on
+    l_p2_18: on
+    l_p1_4: off
+    l_p2_4: off
+- duration: 1
+  lights:
+    l_p1_19: on
+    l_p2_19: on
+    l_p1_5: off
+    l_p2_5: off
+- duration: 1
+  lights:
+    l_p1_20: on
+    l_p2_20: on
+    l_p1_6: off
+    l_p2_6: off
+- duration: 1
+  lights:
+    l_p1_21: on
+    l_p2_21: on
+    l_p1_7: off
+    l_p2_7: off
+- duration: 1
+  lights:
+    l_p1_22: on
+    l_p2_22: on
+    l_p1_8: off
+    l_p2_8: off
+- duration: 1
+  lights:
+    l_p1_23: on
+    l_p2_23: on
+    l_p1_9: off
+    l_p2_9: off
+- duration: 1
+  lights:
+    l_p1_24: on
+    l_p2_24: on
+    l_p1_10: off
+    l_p2_10: off
+- duration: 1
+  lights:
+    l_p1_25: on
+    l_p2_25: on
+    l_p1_11: off
+    l_p2_11: off
+- duration: 1
+  lights:
+    l_p1_26: on
+    l_p2_26: on
+    l_p1_12: off
+    l_p2_12: off
+- duration: 1
+  lights:
+    l_p1_27: on
+    l_p2_27: on
+    l_p1_13: off
+    l_p2_13: off
+- duration: 1
+  lights:
+    l_p1_28: on
+    l_p2_28: on
+    l_p1_14: off
+    l_p2_14: off
+- duration: 1
+  lights:
+    l_p1_29: on
+    l_p2_29: on
+    l_p1_15: off
+    l_p2_15: off
+- duration: 1
+  lights:
+    l_p1_30: on
+    l_p2_30: on
+    l_p1_16: off
+    l_p2_16: off
+- duration: 1
+  lights:
+    l_p1_31: on
+    l_p2_31: on
+    l_p1_17: off
+    l_p2_17: off
+- duration: 1
+  lights:
+    l_p1_32: on
+    l_p2_32: on
+    l_p1_18: off
+    l_p2_18: off
+- duration: 1
+  lights:
+    l_p1_33: on
+    l_p2_33: on
+    l_p1_19: off
+    l_p2_19: off
+- duration: 1
+  lights:
+    l_p1_34: on
+    l_p2_34: on
+    l_p1_20: off
+    l_p2_20: off
+- duration: 1
+  lights:
+    l_p1_35: on
+    l_p2_35: on
+    l_p1_21: off
+    l_p2_21: off
+- duration: 1
+  lights:
+    l_p1_36: on
+    l_p2_36: on
+    l_p1_22: off
+    l_p2_22: off
+- duration: 1
+  lights:
+    l_p1_37: on
+    l_p2_37: on
+    l_p1_23: off
+    l_p2_23: off
+- duration: 1
+  lights:
+    l_p1_38: on
+    l_p2_38: on
+    l_p1_24: off
+    l_p2_24: off
+- duration: 1
+  lights:
+    l_p1_39: on
+    l_p2_39: on
+    l_p1_25: off
+    l_p2_25: off
+- duration: 1
+  lights:
+    l_p1_40: on
+    l_p2_40: on
+    l_p1_26: off
+    l_p2_26: off
+- duration: 1
+  lights:
+    l_p1_41: on
+    l_p2_41: on
+    l_p1_27: off
+    l_p2_27: off
+- duration: 1
+  lights:
+    l_p1_42: on
+    l_p2_42: on
+    l_p1_28: off
+    l_p2_28: off
+- duration: 1
+  lights:
+    l_p1_43: on
+    l_p2_43: on
+    l_p1_29: off
+    l_p2_29: off
+- duration: 1
+  lights:
+    l_p1_44: on
+    l_p2_44: on
+    l_p1_30: off
+    l_p2_30: off
+- duration: 1
+  lights:
+    l_p1_45: on
+    l_p2_45: on
+    l_p1_31: off
+    l_p2_31: off
+- duration: 1
+  lights:
+    l_p1_46: on
+    l_p2_46: on
+    l_p1_32: off
+    l_p2_32: off
+- duration: 1
+  lights:
+    l_p1_47: on
+    l_p2_47: on
+    l_p1_33: off
+    l_p2_33: off
+- duration: 1
+  lights:
+    l_p1_48: on
+    l_p2_48: on
+    l_p1_34: off
+    l_p2_34: off
+- duration: 1
+  lights:
+    l_p1_49: on
+    l_p2_49: on
+    l_p1_35: off
+    l_p2_35: off
+- duration: 1
+  lights:
+    l_p1_50: on
+    l_p2_50: on
+    l_p1_36: off
+    l_p2_36: off
+- duration: 1
+  lights:
+    l_p1_51: on
+    l_p2_51: on
+    l_p1_37: off
+    l_p2_37: off
+- duration: 1
+  lights:
+    l_p1_52: on
+    l_p2_52: on
+    l_p1_38: off
+    l_p2_38: off
+- duration: 1
+  lights:
+    l_p1_53: on
+    l_p2_53: on
+    l_p1_39: off
+    l_p2_39: off
+- duration: 1
+  lights:
+    l_p1_54: on
+    l_p2_54: on
+    l_p1_40: off
+    l_p2_40: off
+- duration: 1
+  lights:
+    l_p1_55: on
+    l_p2_55: on
+    l_p1_41: off
+    l_p2_41: off
+- duration: 1
+  lights:
+    l_p1_56: on
+    l_p2_56: on
+    l_p1_42: off
+    l_p2_42: off
+- duration: 1
+  lights:
+    l_p1_57: on
+    l_p2_57: on
+    l_p1_43: off
+    l_p2_43: off
+- duration: 1
+  lights:
+    l_p1_58: on
+    l_p2_58: on
+    l_p1_44: off
+    l_p2_44: off
+- duration: 1
+  lights:
+    l_p1_59: on
+    l_p2_59: on
+    l_p1_45: off
+    l_p2_45: off
+- duration: 1
+  lights:
+    l_p1_60: on
+    l_p2_60: on
+    l_p1_46: off
+    l_p2_46: off
+- duration: 1
+  lights:
+    l_p1_61: on
+    l_p2_61: on
+    l_p1_47: off
+    l_p2_47: off
+- duration: 1
+  lights:
+    l_p1_62: on
+    l_p2_62: on
+    l_p1_48: off
+    l_p2_48: off
+- duration: 1
+  lights:
+    l_p1_63: on
+    l_p2_63: on
+    l_p1_49: off
+    l_p2_49: off
+- duration: 1
+  lights:
+    l_p1_64: on
+    l_p2_64: on
+    l_p1_50: off
+    l_p2_50: off
+- duration: 1
+  lights:
+    l_p1_65: on
+    l_p2_65: on
+    l_p1_51: off
+    l_p2_51: off
+- duration: 1
+  lights:
+    l_p1_66: on
+    l_p2_66: on
+    l_p1_52: off
+    l_p2_52: off
+- duration: 1
+  lights:
+    l_p1_67: on
+    l_p2_67: on
+    l_p1_53: off
+    l_p2_53: off
+- duration: 1
+  lights:
+    l_p1_68: on
+    l_p2_68: on
+    l_p1_54: off
+    l_p2_54: off
+- duration: 1
+  lights:
+    l_p1_69: on
+    l_p2_69: on
+    l_p1_55: off
+    l_p2_55: off
+- duration: 1
+  lights:
+    l_p1_70: on
+    l_p2_70: on
+    l_p1_56: off
+    l_p2_56: off
+- duration: 1
+  lights:
+    l_p1_71: on
+    l_p2_71: on
+    l_p1_57: off
+    l_p2_57: off
+- duration: 1
+  lights:
+    l_p1_72: on
+    l_p2_72: on
+    l_p1_58: off
+    l_p2_58: off
+- duration: 1
+  lights:
+    l_p1_73: on
+    l_p2_73: on
+    l_p1_59: off
+    l_p2_59: off
+- duration: 1
+  lights:
+    l_p1_74: on
+    l_p2_74: on
+    l_p1_60: off
+    l_p2_60: off
+- duration: 1
+  lights:
+    l_p1_75: on
+    l_p2_75: on
+    l_p1_61: off
+    l_p2_61: off
+- duration: 1
+  lights:
+    l_p1_76: on
+    l_p2_76: on
+    l_p1_62: off
+    l_p2_62: off
+- duration: 1
+  lights:
+    l_p1_77: on
+    l_p2_77: on
+    l_p1_63: off
+    l_p2_63: off
+- duration: 1
+  lights:
+    l_p1_78: on
+    l_p2_78: on
+    l_p1_64: off
+    l_p2_64: off
+- duration: 1
+  lights:
+    l_p1_79: on
+    l_p2_79: on
+    l_p1_65: off
+    l_p2_65: off
+- duration: 1
+  lights:
+    l_p1_80: on
+    l_p2_80: on
+    l_p1_66: off
+    l_p2_66: off
+- duration: 1
+  lights:
+    l_p1_81: on
+    l_p2_81: on
+    l_p1_67: off
+    l_p2_67: off
+- duration: 1
+  lights:
+    l_p1_82: on
+    l_p2_82: on
+    l_p1_68: off
+    l_p2_68: off
+- duration: 1
+  lights:
+    l_p1_83: on
+    l_p2_83: on
+    l_p1_69: off
+    l_p2_69: off
+- duration: 1
+  lights:
+    l_p1_84: on
+    l_p2_84: on
+    l_p1_70: off
+    l_p2_70: off
+- duration: 1
+  lights:
+    l_p1_85: on
+    l_p2_85: on
+    l_p1_71: off
+    l_p2_71: off
+- duration: 1
+  lights:
+    l_p1_86: on
+    l_p2_86: on
+    l_p1_72: off
+    l_p2_72: off
+- duration: 1
+  lights:
+    l_p1_87: on
+    l_p2_87: on
+    l_p1_73: off
+    l_p2_73: off
+- duration: 1
+  lights:
+    l_p1_88: on
+    l_p2_88: on
+    l_p1_74: off
+    l_p2_74: off
+- duration: 1
+  lights:
+    l_p1_89: on
+    l_p2_89: on
+    l_p1_75: off
+    l_p2_75: off
+- duration: 1
+  lights:
+    l_p1_90: on
+    l_p2_90: on
+    l_p1_76: off
+    l_p2_76: off
+- duration: 1
+  lights:
+    l_p1_91: on
+    l_p2_91: on
+    l_p1_77: off
+    l_p2_77: off
+- duration: 1
+  lights:
+    l_p1_92: on
+    l_p2_92: on
+    l_p1_78: off
+    l_p2_78: off
+- duration: 1
+  lights:
+    l_p1_93: on
+    l_p2_93: on
+    l_p1_79: off
+    l_p2_79: off
+- duration: 1
+  lights:
+    l_p1_94: on
+    l_p2_94: on
+    l_p1_80: off
+    l_p2_80: off
+- duration: 1
+  lights:
+    l_p1_95: on
+    l_p2_95: on
+    l_p1_81: off
+    l_p2_81: off
+- duration: 1
+  lights:
+    l_p1_96: on
+    l_p2_96: on
+    l_p1_82: off
+    l_p2_82: off
+- duration: 1
+  lights:
+    l_p1_97: on
+    l_p2_97: on
+    l_p1_83: off
+    l_p2_83: off
+- duration: 1
+  lights:
+    l_p1_98: on
+    l_p2_98: on
+    l_p1_84: off
+    l_p2_84: off
+- duration: 1
+  lights:
+    l_p1_99: on
+    l_p2_99: on
+    l_p1_85: off
+    l_p2_85: off
+- duration: 1
+  lights:
+    l_p1_100: on
+    l_p2_100: on
+    l_p1_86: off
+    l_p2_86: off
+- duration: 1
+  lights:
+    l_p1_101: on
+    l_p2_101: on
+    l_p1_87: off
+    l_p2_87: off
+- duration: 1
+  lights:
+    l_p1_102: on
+    l_p2_102: on
+    l_p1_88: off
+    l_p2_88: off
+- duration: 1
+  lights:
+    l_p1_103: on
+    l_p2_103: on
+    l_p1_89: off
+    l_p2_89: off
+- duration: 1
+  lights:
+    l_p1_104: on
+    l_p2_104: on
+    l_p1_90: off
+    l_p2_90: off
+- duration: 1
+  lights:
+    l_p1_105: on
+    l_p2_105: on
+    l_p1_91: off
+    l_p2_91: off
+- duration: 1
+  lights:
+    l_p1_106: on
+    l_p2_106: on
+    l_p1_92: off
+    l_p2_92: off
+- duration: 1
+  lights:
+    l_p1_107: on
+    l_p2_107: on
+    l_p1_93: off
+    l_p2_93: off
+- duration: 1
+  lights:
+    l_p1_108: on
+    l_p2_108: on
+    l_p1_94: off
+    l_p2_94: off
+- duration: 1
+  lights:
+    l_p1_109: on
+    l_p2_109: on
+    l_p1_95: off
+    l_p2_95: off
+- duration: 1
+  lights:
+    l_p1_110: on
+    l_p2_110: on
+    l_p1_96: off
+    l_p2_96: off
+- duration: 1
+  lights:
+    l_p1_111: on
+    l_p2_111: on
+    l_p1_97: off
+    l_p2_97: off
+- duration: 1
+  lights:
+    l_p1_112: on
+    l_p2_112: on
+    l_p1_98: off
+    l_p2_98: off
+- duration: 1
+  lights:
+    l_p1_113: on
+    l_p2_113: on
+    l_p1_99: off
+    l_p2_99: off
+- duration: 1
+  lights:
+    l_p1_114: on
+    l_p2_114: on
+    l_p1_100: off
+    l_p2_100: off
+- duration: 1
+  lights:
+    l_p1_115: on
+    l_p2_115: on
+    l_p1_101: off
+    l_p2_101: off
+- duration: 1
+  lights:
+    l_p1_116: on
+    l_p2_116: on
+    l_p1_102: off
+    l_p2_102: off
+- duration: 1
+  lights:
+    l_p1_117: on
+    l_p2_117: on
+    l_p1_103: off
+    l_p2_103: off
+- duration: 1
+  lights:
+    l_p1_118: on
+    l_p2_118: on
+    l_p1_104: off
+    l_p2_104: off
+- duration: 1
+  lights:
+    l_p1_119: on
+    l_p2_119: on
+    l_p1_105: off
+    l_p2_105: off
+- duration: 1
+  lights:
+    l_p1_120: on
+    l_p2_120: on
+    l_p1_106: off
+    l_p2_106: off
+- duration: 1
+  lights:
+    l_p1_1: on
+    l_p2_1: on
+    l_p1_107: off
+    l_p2_107: off
+- duration: 1
+  lights:
+    l_p1_2: on
+    l_p2_2: on
+    l_p1_108: off
+    l_p2_108: off
+- duration: 1
+  lights:
+    l_p1_3: on
+    l_p2_3: on
+    l_p1_109: off
+    l_p2_109: off
+- duration: 1
+  lights:
+    l_p1_4: on
+    l_p2_4: on
+    l_p1_110: off
+    l_p2_110: off
+- duration: 1
+  lights:
+    l_p1_5: on
+    l_p2_5: on
+    l_p1_111: off
+    l_p2_111: off
+- duration: 1
+  lights:
+    l_p1_6: on
+    l_p2_6: on
+    l_p1_112: off
+    l_p2_112: off
+- duration: 1
+  lights:
+    l_p1_7: on
+    l_p2_7: on
+    l_p1_113: off
+    l_p2_113: off
+- duration: 1
+  lights:
+    l_p1_8: on
+    l_p2_8: on
+    l_p1_114: off
+    l_p2_114: off
+- duration: 1
+  lights:
+    l_p1_9: on
+    l_p2_9: on
+    l_p1_115: off
+    l_p2_115: off
+- duration: 1
+  lights:
+    l_p1_10: on
+    l_p2_10: on
+    l_p1_116: off
+    l_p2_116: off
+- duration: 1
+  lights:
+    l_p1_11: on
+    l_p2_11: on
+    l_p1_117: off
+    l_p2_117: off
+- duration: 1
+  lights:
+    l_p1_12: on
+    l_p2_12: on
+    l_p1_118: off
+    l_p2_118: off
+- duration: 1
+  lights:
+    l_p1_13: on
+    l_p2_13: on
+    l_p1_119: off
+    l_p2_119: off
+- duration: 1
+  lights:
+    l_p1_14: on
+    l_p2_14: on
+    l_p1_120: off
+    l_p2_120: off
+- duration: 1
+  lights:
+    l_p1_15: on
+    l_p2_15: on
+    l_p1_1: off
+    l_p2_1: off
+- duration: 1
+  lights:
+    l_p1_16: on
+    l_p2_16: on
+    l_p1_2: off
+    l_p2_2: off
+- duration: 1
+  lights:
+    l_p1_17: on
+    l_p2_17: on
+    l_p1_3: off
+    l_p2_3: off
+
+- duration: 0.1

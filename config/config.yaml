@@ -17,7 +17,7 @@ hardware:
     servo_controllers: pololu_maestro
 
 fadecandy:
-    whitepoint: [0.8, 0.8, 0.8]   #set overall brightness or lower individual RGB
+    whitepoint: [0.5, 0.5, 0.5]   #set overall brightness or lower individual RGB
 
 opp:
     ports: COM3
@@ -341,7 +341,7 @@ slides:
         font_name: Ten_segment
         color: blue
         x: 620
-        y: 644
+        y: 724
         font_size: 240
         anchor_x: right
         anchor_y: bottom
@@ -352,8 +352,8 @@ slides:
         min_digits: 2
         font_name: Ten_segment
         color: blue
-        x: 620
-        y: 84        
+        x: 1230
+        y: 724        
         font_size: 240
         anchor_x: right
         anchor_y: bottom
@@ -365,8 +365,8 @@ slides:
         min_digits: 2
         font_name: Ten_segment
         color: blue
-        x: 1230
-        y: 644        
+        x: 620
+        y: 68        
         font_size: 240
         anchor_x: right
         anchor_y: bottom
@@ -378,7 +378,7 @@ slides:
         font_name: Ten_segment
         color: blue
         x: 1230
-        y: 84        
+        y: 68        
         font_size: 240
         anchor_x: right
         anchor_y: bottom
@@ -388,9 +388,9 @@ slides:
         text: (ball)
         font_name: Ten_segment
         color: blue
-        x: 1230
-        y: 404        
-        anchor_x: right
+        x: 660
+        y: 422        
+        anchor_x: left
         anchor_y: bottom
         font_size: 145
         z: 2

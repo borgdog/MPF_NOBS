@@ -46,7 +46,7 @@ slides:
       text: P(player_num)
       color: blue
       x: 620
-      y: 84    
+      y: 68    
       z: 3
       anchor_x: right
       anchor_y: bottom
@@ -54,7 +54,7 @@ slides:
 
     - type: text
       x: 1230
-      y: 644    
+      y: 724    
       font_size: 240
       font_name: Ten_segment
       anchor_x: right
@@ -72,7 +72,7 @@ slides:
       # dynamic_x_pad: 190
       color: blue
       x: 660
-      y: 84
+      y: 68
       font_size: 240
       anchor_x: left
       anchor_y: bottom
@@ -95,7 +95,7 @@ slides:
       anchor_x: left
       anchor_y: bottom
       x: 660
-      y: 84
+      y: 68
       color: blue
       z: 3
 

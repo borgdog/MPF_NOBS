@@ -21,7 +21,7 @@ slides:
     widgets:
         - type: text
           x: 620
-          y: 644          
+          y: 724          
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
@@ -32,7 +32,7 @@ slides:
 
         - type: text
           x: 1230
-          y: 644         
+          y: 724         
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
@@ -46,7 +46,7 @@ slides:
     widgets:
         - type: text
           x: 620
-          y: 644          
+          y: 724          
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
@@ -57,7 +57,7 @@ slides:
 
         - type: text
           x: 1230
-          y: 644          
+          y: 724          
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
@@ -73,7 +73,7 @@ slides:
           anchor_x: right
           anchor_y: bottom    
           x: 620
-          y: 84
+          y: 68
           z: 3
           color: blue
           expire: 1s
@@ -85,7 +85,7 @@ slides:
           anchor_x: right
           anchor_y: bottom    
           x: 1230
-          y: 84
+          y: 68
           z: 3
           color: blue
           expire: 1s
@@ -94,7 +94,7 @@ slides:
   tilt_slide:
         - type: text
           x: 620
-          y: 644          
+          y: 724          
           font_size: 240
           font_name: Ten_segment
           anchor_x: right
@@ -114,7 +114,7 @@ slides:
 
         - type: text
           x: 1230
-          y: 644         
+          y: 724         
           font_size: 240
           font_name: Ten_segment
           anchor_x: right

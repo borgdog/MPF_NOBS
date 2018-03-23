@@ -30,8 +30,8 @@ scoring:
 
 event_player:
 
-    game_started:
-        roto_(machine.rotopos)
+    # game_started:
+    #     roto_(machine.rotopos)
 
     machine_var_roto:
         roto_(machine.rotopos)

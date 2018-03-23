@@ -1,8 +1,8 @@
 games:
 - !!python/tuple
   - DOG
-  - 0
+  - 4
 score:
 - !!python/tuple
   - DOG
-  - 62
+  - 184

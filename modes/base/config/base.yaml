@@ -27,6 +27,11 @@ timers:
         end_value: 0
         direction: down
         tick_interval: 0.5s
+        control_events:
+            - event: ball_save_bs_saving_ball
+              action: restart
+            - event: ball_save_skill_bs_enabled
+              action: restart
         debug: true
         
 
@@ -62,18 +67,18 @@ scoring:
     player_gamescore{current_player.gamescore>120}:  #check for winning game
         gameswon: 1
         games: 1
-        gamescore:              #RESET FOR SINGLE PLAYER GAME
+        gamescore:              #RESET FOR SINGLE PLaYER GaME
             score: 0
             action: set
 
     player_gameswon{game.num_players==2 and player_num==1}:   
         skunks: 
-            score: 1 if players[1].gamescore<91 else 0             # CHECK FOR SKUNK PLAYER 1 WON
+            score: 1 if players[1].gamescore<91 else 0             # CHECK FOR SKUNK PLaYER 1 WON
             action: set
 
     player_gameswon{game.num_players==2 and player_num==2}:   
         skunks: 
-            score: 1 if players[0].gamescore<91 else 0             # CHECK FOR SKUNK PLAYER 2 WON
+            score: 1 if players[0].gamescore<91 else 0             # CHECK FOR SKUNK PLaYER 2 WON
             action: set
 
     player_skunks{current_player.skunks==1 and player_num==1}:
@@ -84,10 +89,10 @@ scoring:
         games: 3 if players[0].gamescore<61 else 1              # CHECK FOR DOUBLE SKUNK IF SKUNK SCORE
         gamereset: 1
     
-    player_skunks{current_player.skunks==0}:    # INITIATE RESET IF NO SKUNKS
+    player_skunks{current_player.skunks==0}:    # INITIaTE RESET IF NO SKUNKS
         gamereset: 1
  
-    player_gamereset{game.num_players==2}: #RESET GAME SCORES AFTER GAME WON on 2 player games
+    player_gamereset{game.num_players==2}: #RESET GaME SCORES aFTER GaME WON on 2 player games
         resetplayer1: 1
         resetplayer2: 1
         
@@ -175,7 +180,7 @@ scoring:
         score: 2 * current_player.dpegs
     droptarget_9_hit{machine.roto==6 or machine.roto==9}:
         score: 2 * current_player.dpegs
-    droptarget_A_hit{machine.roto==1}:
+    droptarget_a_hit{machine.roto==1}:
         score: 2 * current_player.dpegs
     droptarget_2_hit{machine.roto==2}:
         score: 2 * current_player.dpegs
@@ -255,20 +260,20 @@ shots:
         show_tokens:
             lights: l_handc8
         profile: p_offon
-    droptarget_A:    
+    droptarget_a:    
         switch: s_drop_ace
         show_tokens:
-            led: l_handAa
+            led: l_handaa
         profile: p_offon
     droptarget_2:    
         switch: s_drop_2
         show_tokens:
-            led: l_handA2
+            led: l_handa2
         profile: p_offon
     droptarget_3:    
         switch: s_drop_3
         show_tokens:
-            led: l_handA3
+            led: l_handa3
         profile: p_offon
     right_2:
         switch: s_ro_2
@@ -278,12 +283,12 @@ shots:
     right_22:
         switch: s_ro_2
         show_tokens:
-            led: l_handA2b
+            led: l_handa2b
         profile: p_offon
     top_king:
         switch: s_ro_king
         show_tokens:
-            led: l_topK
+            led: l_topk
         profile: p_onoff
     top_king2:
         switch: s_ro_king
@@ -293,7 +298,7 @@ shots:
     top_queen:
         switch: s_ro_queen
         show_tokens:
-            led: l_topQ
+            led: l_topq
         profile: p_onoff
     top_queen2:
         switch: s_ro_queen
@@ -303,7 +308,7 @@ shots:
     top_jack:
         switch: s_ro_jack
         show_tokens:
-            led: l_topJ
+            led: l_topj
         profile: p_onoff
     top_jack2:
         switch: s_ro_jack
@@ -331,7 +336,7 @@ shots:
 #
 shot_groups:
     handa: 
-        shots: droptarget_A, droptarget_2, droptarget_3, right_22
+        shots: droptarget_a, droptarget_2, droptarget_3, right_22
         reset_events:
             ball_started: 0
             handa_complete: 3s
@@ -430,7 +435,7 @@ achievements:
         complete_events: handa_complete
         reset_events: ball_drain
         show_tokens:
-            lights: l_DPa
+            lights: l_dpa
         show_when_started: off
         show_when_completed: on
     dp_handb:
@@ -438,7 +443,7 @@ achievements:
         complete_events: handb_complete
         reset_events: ball_drain
         show_tokens:
-            lights: l_DPb
+            lights: l_dpb
         show_when_started: off
         show_when_completed: on
     dp_handc:
@@ -446,7 +451,7 @@ achievements:
         complete_events: handc_complete
         reset_events: ball_drain
         show_tokens:
-            lights: l_DPc
+            lights: l_dpc
         show_when_started: off
         show_when_completed: on
     dp_handd:
@@ -454,7 +459,7 @@ achievements:
         complete_events: handd_complete
         reset_events: ball_drain
         show_tokens:
-            lights: l_DPd
+            lights: l_dpd
         show_when_started: off
         show_when_completed: on
 
@@ -494,13 +499,13 @@ show_player:
         show_flash:
             loops: 5
             show_tokens:
-                led: l_handA2, l_handA2b, l_handA3, l_handAa, l_right2
+                led: l_handa2, l_handa2b, l_handa3, l_handaa, l_right2
                 color1: yellow
     handb_complete: 
         show_flash:
             loops: 5
             show_tokens:
-                led: l_handB4, l_handB5, l_handB5b, l_handB6
+                led: l_handb4, l_handb5, l_handb5b, l_handb6
                 color1: green
     handc_complete: 
         show_flash:
@@ -512,7 +517,7 @@ show_player:
         show_flash:
             loops: 5
             show_tokens:
-                led: l_handd5, l_handdj, l_handdq, l_handdk, l_topJ, l_topQ, l_topK, l_leftout
+                led: l_handd5, l_handdj, l_handdq, l_handdk, l_topj, l_topq, l_topk, l_leftout
                 color1: blue
 
 shows:

@@ -18,17 +18,13 @@ class Cboard(Scriptlet):
                 self.machine.shows['score_flash'].play(show_tokens=dict(led='l_p'+str(player_num)+'_'+str(x)), loops=5)  # flash change for 3 seconds
                 lname = 'l_p'+str(player_num)+'_'+str(x)
                 self.log.info('Setting rgb '+lname + ' on')
-                self.machine.lights[lname ].on(key='gi')
-                # if player_num==1: 
-                #     self.machine.lights[lname ].color('red',fade_ms=100,key='gi')
-                # else:
-                #     self.machine.lights[lname ].color('blue',fade_ms=100,key='gi')
+                self.machine.lights[lname ].on(key='cb')
 
     def blankem(self):
         self.log.info('blanking the board')
         for x in range(1, 121):
             lname = 'l_p1_'+str(x)
-            self.machine.lights[lname ].off(fade_ms=100,key='gi')
+            self.machine.lights[lname ].off(fade_ms=100,key='cb')
             lname = 'l_p2_'+str(x)
-            self.machine.lights[lname ].off(fade_ms=100,key='gi')
+            self.machine.lights[lname ].off(fade_ms=100,key='cb')
 

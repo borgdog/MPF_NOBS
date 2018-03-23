@@ -1,7 +1,10 @@
-# config_version=5
+#config_version=5
 # NOBS
 
 lights:
+
+# PLAYFIELD INSERTS 
+
     l_shootagain:
         type: grb
         number: 33 
@@ -139,6 +142,159 @@ lights:
         number: 13
         default_on_color: yellow
 
+# BACKBOX LIGHTS
+
+    l_bb_bip_1:
+        type: grb
+        number: 64
+        default_on_color: f5f5f5
+    l_bb_bip_2:
+        type: grb
+        number: 65
+        default_on_color: f5f5f5
+    l_bb_bip_3:
+        type: grb
+        number: 66
+        default_on_color: f5f5f5
+    l_bb_bip_4:
+        type: grb
+        number: 67
+        default_on_color: f5f5f5
+    l_bb_bip_5:
+        type: grb
+        number: 68
+        default_on_color: f5f5f5
+    l_bb_gameover:
+        type: grb
+        number: 69
+        default_on_color: f5f5f5
+    l_bb_tilt:
+        type: grb
+        number: 70
+        default_on_color: f5f5f5
+    l_bb_gi_1:
+        type: grb
+        number: 71
+        default_on_color: f5f5f5
+    l_bb_gi_2:
+        type: grb
+        number: 72
+        default_on_color: f5f5f5
+    l_bb_gi_3:
+        type: grb
+        number: 73
+        default_on_color: f5f5f5
+    l_bb_gi_4:
+        type: grb
+        number: 74
+        default_on_color: f5f5f5
+    l_bb_gi_5:
+        type: grb
+        number: 75
+        default_on_color: f5f5f5
+    l_bb_gi_6:
+        type: grb
+        number: 76
+        default_on_color: f5f5f5
+    l_bb_gi_7:
+        type: grb
+        number: 77
+        default_on_color: f5f5f5
+    l_bb_gi_8:
+        type: grb
+        number: 78
+        default_on_color: f5f5f5
+    l_bb_gi_9:
+        type: grb
+        number: 79
+        default_on_color: f5f5f5
+    l_bb_gi_10:
+        type: grb
+        number: 80
+        default_on_color: f5f5f5
+    l_bb_gi_11:
+        type: grb
+        number: 81
+        default_on_color: f5f5f5
+    l_bb_gi_12:
+        type: grb
+        number: 82
+        default_on_color: f5f5f5
+    l_bb_pup_1:
+        type: grb
+        number: 83
+        default_on_color: f5f5f5
+    l_bb_pup_2:
+        type: grb
+        number: 84
+        default_on_color: f5f5f5
+
+# PLAYFIELD GI LIGHTS
+
+    l_gi_1:
+        type: grb
+        number: 128
+        default_on_color: f5f5f5
+
+    l_gi_2:
+        type: grb
+        number: 129
+        default_on_color: f5f5f5
+
+    l_gi_3:
+        type: grb
+        number: 130
+        default_on_color: f5f5f5
+
+    l_gi_4:
+        type: grb
+        number: 131
+        default_on_color: f5f5f5
+
+    l_gi_5:
+        type: grb
+        number: 132
+        default_on_color: f5f5f5
+
+    l_gi_6:
+        type: grb
+        number: 133
+        default_on_color: f5f5f5
+
+    l_gi_7:
+        type: grb
+        number: 134
+        default_on_color: f5f5f5
+
+    l_gi_8:
+        type: grb
+        number: 135
+        default_on_color: f5f5f5
+
+    l_gi_9:
+        type: grb
+        number: 136
+        default_on_color: f5f5f5
+
+    l_gi_10:
+        type: grb
+        number: 137
+        default_on_color: f5f5f5
+
+    l_gi_11:
+        type: grb
+        number: 138
+        default_on_color: f5f5f5
+
+    l_gi_12:
+        type: grb
+        number: 139
+        default_on_color: f5f5f5
+
+    l_gi_13:
+        type: grb
+        number: 140
+        default_on_color: f5f5f5
 
 
 # CRIBBAGE BOARD TRACKING LIGHTS
@@ -146,725 +302,966 @@ lights:
     #     player1 
 
     l_p1_1:
+        type: grb
         number: 256
         default_on_color: red
     l_p1_2:
+        type: grb
         number: 257
         default_on_color: red
     l_p1_3:
+        type: grb
         number: 258
         default_on_color: red
     l_p1_4:
+        type: grb
         number: 259
         default_on_color: red
     l_p1_5:
+        type: grb
         number: 260
         default_on_color: red
     l_p1_6:
+        type: grb
         number: 261
         default_on_color: red
     l_p1_7:
+        type: grb
         number: 262
         default_on_color: red
     l_p1_8:
+        type: grb
         number: 263
         default_on_color: red
     l_p1_9:
+        type: grb
         number: 264
         default_on_color: red
     l_p1_10:
+        type: grb
         number: 265
         default_on_color: red
     l_p1_11:
+        type: grb
         number: 266
         default_on_color: red
     l_p1_12:
+        type: grb
         number: 267
         default_on_color: red
     l_p1_13:
+        type: grb
         number: 268
         default_on_color: red
     l_p1_14:
+        type: grb
         number: 269
         default_on_color: red
     l_p1_15:
+        type: grb
         number: 270
         default_on_color: red
     l_p1_16:
+        type: grb
         number: 271
         default_on_color: red
     l_p1_17:
+        type: grb
         number: 272
         default_on_color: red
     l_p1_18:
+        type: grb
         number: 273
         default_on_color: red
     l_p1_19:
+        type: grb
         number: 274
         default_on_color: red
     l_p1_20:
+        type: grb
         number: 275
         default_on_color: red
     l_p1_21:
+        type: grb
         number: 276
         default_on_color: red
     l_p1_22:
+        type: grb
         number: 277
         default_on_color: red
     l_p1_23:
+        type: grb
         number: 278
         default_on_color: red
     l_p1_24:
+        type: grb
         number: 279
         default_on_color: red
     l_p1_25:
+        type: grb
         number: 280
         default_on_color: red
     l_p1_26:
+        type: grb
         number: 281
         default_on_color: red
     l_p1_27:
+        type: grb
         number: 282
         default_on_color: red
     l_p1_28:
+        type: grb
         number: 283
         default_on_color: red
     l_p1_29:
+        type: grb
         number: 284
         default_on_color: red
     l_p1_30:
+        type: grb
         number: 285
         default_on_color: red
     l_p1_31:
+        type: grb
         number: 286
         default_on_color: red
     l_p1_32:
+        type: grb
         number: 287
         default_on_color: red
     l_p1_33:
+        type: grb
         number: 288
         default_on_color: red
     l_p1_34:
+        type: grb
         number: 289
         default_on_color: red
     l_p1_35:
+        type: grb
         number: 290
         default_on_color: red
     l_p1_36:
+        type: grb
         number: 291
         default_on_color: red
     l_p1_37:
+        type: grb
         number: 292
         default_on_color: red
     l_p1_38:
+        type: grb
         number: 293
         default_on_color: red
     l_p1_39:
+        type: grb
         number: 294
         default_on_color: red
     l_p1_40:
+        type: grb
         number: 295
         default_on_color: red
     l_p1_41:
+        type: grb
         number: 296
         default_on_color: red
     l_p1_42:
+        type: grb
         number: 297
         default_on_color: red
     l_p1_43:
+        type: grb
         number: 298
         default_on_color: red
     l_p1_44:
+        type: grb
         number: 299
         default_on_color: red
     l_p1_45:
+        type: grb
         number: 300
         default_on_color: red
     l_p1_46:
+        type: grb
         number: 301
         default_on_color: red
     l_p1_47:
+        type: grb
         number: 302
         default_on_color: red
     l_p1_48:
+        type: grb
         number: 303
         default_on_color: red
     l_p1_49:
+        type: grb
         number: 304
         default_on_color: red
     l_p1_50:
+        type: grb
         number: 305
         default_on_color: red
     l_p1_51:
+        type: grb
         number: 306
         default_on_color: red
     l_p1_52:
+        type: grb
         number: 307
         default_on_color: red
     l_p1_53:
+        type: grb
         number: 308
         default_on_color: red
     l_p1_54:
+        type: grb
         number: 309
         default_on_color: red
     l_p1_55:
+        type: grb
         number: 310
         default_on_color: red
     l_p1_56:
+        type: grb
         number: 311
         default_on_color: red
     l_p1_57:
+        type: grb
         number: 312
         default_on_color: red
     l_p1_58:
+        type: grb
         number: 313
         default_on_color: red
     l_p1_59:
+        type: grb
         number: 314
         default_on_color: red
     l_p1_60:
+        type: grb
         number: 315
         default_on_color: red
     l_p1_61:
+        type: grb
         number: 316
         default_on_color: red
     l_p1_62:
+        type: grb
         number: 317
         default_on_color: red
     l_p1_63:
+        type: grb
         number: 318
         default_on_color: red
     l_p1_64:
+        type: grb
         number: 319
         default_on_color: red
     l_p1_65:
+        type: grb
         number: 320
         default_on_color: red
     l_p1_66:
+        type: grb
         number: 321
         default_on_color: red
     l_p1_67:
+        type: grb
         number: 322
         default_on_color: red
     l_p1_68:
+        type: grb
         number: 323
         default_on_color: red
     l_p1_69:
+        type: grb
         number: 324
         default_on_color: red
     l_p1_70:
+        type: grb
         number: 325
         default_on_color: red
     l_p1_71:
+        type: grb
         number: 326
         default_on_color: red
     l_p1_72:
+        type: grb
         number: 327
         default_on_color: red
     l_p1_73:
+        type: grb
         number: 328
         default_on_color: red
     l_p1_74:
+        type: grb
         number: 329
         default_on_color: red
     l_p1_75:
+        type: grb
         number: 330
         default_on_color: red
     l_p1_76:
+        type: grb
         number: 331
         default_on_color: red
     l_p1_77:
+        type: grb
         number: 332
         default_on_color: red
     l_p1_78:
+        type: grb
         number: 333
         default_on_color: red
     l_p1_79:
+        type: grb
         number: 334
         default_on_color: red
     l_p1_80:
+        type: grb
         number: 335
         default_on_color: red
     l_p1_81:
+        type: grb
         number: 336
         default_on_color: red
     l_p1_82:
+        type: grb
         number: 337
         default_on_color: red
     l_p1_83:
+        type: grb
         number: 338
         default_on_color: red
     l_p1_84:
+        type: grb
         number: 339
         default_on_color: red
     l_p1_85:
+        type: grb
         number: 340
         default_on_color: red
     l_p1_86:
+        type: grb
         number: 341
         default_on_color: red
     l_p1_87:
+        type: grb
         number: 342
         default_on_color: red
     l_p1_88:
+        type: grb
         number: 343
         default_on_color: red
     l_p1_89:
+        type: grb
         number: 344
         default_on_color: red
     l_p1_90:
+        type: grb
         number: 345
         default_on_color: red
     l_p1_91:
+        type: grb
         number: 346
         default_on_color: red
     l_p1_92:
+        type: grb
         number: 347
         default_on_color: red
     l_p1_93:
+        type: grb
         number: 348
         default_on_color: red
     l_p1_94:
+        type: grb
         number: 349
         default_on_color: red
     l_p1_95:
+        type: grb
         number: 350
         default_on_color: red
     l_p1_96:
+        type: grb
         number: 351
         default_on_color: red
     l_p1_97:
+        type: grb
         number: 352
         default_on_color: red
     l_p1_98:
+        type: grb
         number: 353
         default_on_color: red
     l_p1_99:
+        type: grb
         number: 354
         default_on_color: red
     l_p1_100:
+        type: grb
         number: 355
         default_on_color: red
     l_p1_101:
+        type: grb
         number: 356
         default_on_color: red
     l_p1_102:
+        type: grb
         number: 357
         default_on_color: red
     l_p1_103:
+        type: grb
         number: 358
         default_on_color: red
     l_p1_104:
+        type: grb
         number: 359
         default_on_color: red
     l_p1_105:
+        type: grb
         number: 360
         default_on_color: red
     l_p1_106:
+        type: grb
         number: 361
         default_on_color: red
     l_p1_107:
+        type: grb
         number: 362
         default_on_color: red
     l_p1_108:
+        type: grb
         number: 363
         default_on_color: red
     l_p1_109:
+        type: grb
         number: 364
         default_on_color: red
     l_p1_110:
+        type: grb
         number: 365
         default_on_color: red
     l_p1_111:
+        type: grb
         number: 366
         default_on_color: red
     l_p1_112:
+        type: grb
         number: 367
         default_on_color: red
     l_p1_113:
+        type: grb
         number: 368
         default_on_color: red
     l_p1_114:
+        type: grb
         number: 369
         default_on_color: red
     l_p1_115:
+        type: grb
         number: 370
         default_on_color: red
     l_p1_116:
+        type: grb
         number: 371
         default_on_color: red
     l_p1_117:
+        type: grb
         number: 372
         default_on_color: red
     l_p1_118:
+        type: grb
         number: 373
         default_on_color: red
     l_p1_119:
+        type: grb
         number: 374
         default_on_color: red
     l_p1_120:
+        type: grb
         number: 375
         default_on_color: red
 
-    #     player2 
+    #   player 2
 
     l_p2_1:
+        type: grb
         number: 384
         default_on_color: blue
     l_p2_2:
+        type: grb
         number: 385
         default_on_color: blue
     l_p2_3:
+        type: grb
         number: 386
         default_on_color: blue
     l_p2_4:
+        type: grb
         number: 387
         default_on_color: blue
     l_p2_5:
+        type: grb
         number: 388
         default_on_color: blue
     l_p2_6:
+        type: grb
         number: 389
         default_on_color: blue
     l_p2_7:
+        type: grb
         number: 390
         default_on_color: blue
     l_p2_8:
+        type: grb
         number: 391
         default_on_color: blue
     l_p2_9:
+        type: grb
         number: 392
         default_on_color: blue
     l_p2_10:
+        type: grb
         number: 393
         default_on_color: blue
     l_p2_11:
+        type: grb
         number: 394
         default_on_color: blue
     l_p2_12:
+        type: grb
         number: 395
         default_on_color: blue
     l_p2_13:
+        type: grb
         number: 396
         default_on_color: blue
     l_p2_14:
+        type: grb
         number: 397
         default_on_color: blue
     l_p2_15:
+        type: grb
         number: 398
         default_on_color: blue
     l_p2_16:
+        type: grb
         number: 399
         default_on_color: blue
     l_p2_17:
+        type: grb
         number: 400
         default_on_color: blue
     l_p2_18:
+        type: grb
         number: 401
         default_on_color: blue
     l_p2_19:
+        type: grb
         number: 402
         default_on_color: blue
     l_p2_20:
+        type: grb
         number: 403
         default_on_color: blue
     l_p2_21:
+        type: grb
         number: 404
         default_on_color: blue
     l_p2_22:
+        type: grb
         number: 405
         default_on_color: blue
     l_p2_23:
+        type: grb
         number: 406
         default_on_color: blue
     l_p2_24:
+        type: grb
         number: 407
         default_on_color: blue
     l_p2_25:
+        type: grb
         number: 408
         default_on_color: blue
     l_p2_26:
+        type: grb
         number: 409
         default_on_color: blue
     l_p2_27:
+        type: grb
         number: 410
         default_on_color: blue
     l_p2_28:
+        type: grb
         number: 411
         default_on_color: blue
     l_p2_29:
+        type: grb
         number: 412
         default_on_color: blue
     l_p2_30:
+        type: grb
         number: 413
         default_on_color: blue
     l_p2_31:
+        type: grb
         number: 414
         default_on_color: blue
     l_p2_32:
+        type: grb
         number: 415
         default_on_color: blue
     l_p2_33:
+        type: grb
         number: 416
         default_on_color: blue
     l_p2_34:
+        type: grb
         number: 417
         default_on_color: blue
     l_p2_35:
+        type: grb
         number: 418
         default_on_color: blue
     l_p2_36:
+        type: grb
         number: 419
         default_on_color: blue
     l_p2_37:
+        type: grb
         number: 420
         default_on_color: blue
     l_p2_38:
+        type: grb
         number: 421
         default_on_color: blue
     l_p2_39:
+        type: grb
         number: 422
         default_on_color: blue
     l_p2_40:
+        type: grb
         number: 423
         default_on_color: blue
     l_p2_41:
+        type: grb
         number: 424
         default_on_color: blue
     l_p2_42:
+        type: grb
         number: 425
         default_on_color: blue
     l_p2_43:
+        type: grb
         number: 426
         default_on_color: blue
     l_p2_44:
+        type: grb
         number: 427
         default_on_color: blue
     l_p2_45:
+        type: grb
         number: 428
         default_on_color: blue
     l_p2_46:
+        type: grb
         number: 429
         default_on_color: blue
     l_p2_47:
+        type: grb
         number: 430
         default_on_color: blue
     l_p2_48:
+        type: grb
         number: 431
         default_on_color: blue
     l_p2_49:
+        type: grb
         number: 432
         default_on_color: blue
     l_p2_50:
+        type: grb
         number: 433
         default_on_color: blue
     l_p2_51:
+        type: grb
         number: 434
         default_on_color: blue
     l_p2_52:
+        type: grb
         number: 435
         default_on_color: blue
     l_p2_53:
+        type: grb
         number: 436
         default_on_color: blue
     l_p2_54:
+        type: grb
         number: 437
         default_on_color: blue
     l_p2_55:
+        type: grb
         number: 438
         default_on_color: blue
     l_p2_56:
+        type: grb
         number: 439
         default_on_color: blue
     l_p2_57:
+        type: grb
         number: 440
         default_on_color: blue
     l_p2_58:
+        type: grb
         number: 441
         default_on_color: blue
     l_p2_59:
+        type: grb
         number: 442
         default_on_color: blue
     l_p2_60:
+        type: grb
         number: 443
         default_on_color: blue
     l_p2_61:
+        type: grb
         number: 444
         default_on_color: blue
     l_p2_62:
+        type: grb
         number: 445
         default_on_color: blue
     l_p2_63:
+        type: grb
         number: 446
         default_on_color: blue
     l_p2_64:
+        type: grb
         number: 447
         default_on_color: blue
     l_p2_65:
+        type: grb
         number: 448
         default_on_color: blue
     l_p2_66:
+        type: grb
         number: 449
         default_on_color: blue
     l_p2_67:
+        type: grb
         number: 450
         default_on_color: blue
     l_p2_68:
+        type: grb
         number: 451
         default_on_color: blue
     l_p2_69:
+        type: grb
         number: 452
         default_on_color: blue
     l_p2_70:
+        type: grb
         number: 453
         default_on_color: blue
     l_p2_71:
+        type: grb
         number: 454
         default_on_color: blue
     l_p2_72:
+        type: grb
         number: 455
         default_on_color: blue
     l_p2_73:
+        type: grb
         number: 456
         default_on_color: blue
     l_p2_74:
+        type: grb
         number: 457
         default_on_color: blue
     l_p2_75:
+        type: grb
         number: 458
         default_on_color: blue
     l_p2_76:
+        type: grb
         number: 459
         default_on_color: blue
     l_p2_77:
+        type: grb
         number: 460
         default_on_color: blue
     l_p2_78:
+        type: grb
         number: 461
         default_on_color: blue
     l_p2_79:
+        type: grb
         number: 462
         default_on_color: blue
     l_p2_80:
+        type: grb
         number: 463
         default_on_color: blue
     l_p2_81:
+        type: grb
         number: 464
         default_on_color: blue
     l_p2_82:
+        type: grb
         number: 465
         default_on_color: blue
     l_p2_83:
+        type: grb
         number: 466
         default_on_color: blue
     l_p2_84:
+        type: grb
         number: 467
         default_on_color: blue
     l_p2_85:
+        type: grb
         number: 468
         default_on_color: blue
     l_p2_86:
+        type: grb
         number: 469
         default_on_color: blue
     l_p2_87:
+        type: grb
         number: 470
         default_on_color: blue
     l_p2_88:
+        type: grb
         number: 471
         default_on_color: blue
     l_p2_89:
+        type: grb
         number: 472
         default_on_color: blue
     l_p2_90:
+        type: grb
         number: 473
         default_on_color: blue
     l_p2_91:
+        type: grb
         number: 474
         default_on_color: blue
     l_p2_92:
+        type: grb
         number: 475
         default_on_color: blue
     l_p2_93:
+        type: grb
         number: 476
         default_on_color: blue
     l_p2_94:
+        type: grb
         number: 477
         default_on_color: blue
     l_p2_95:
+        type: grb
         number: 478
         default_on_color: blue
     l_p2_96:
+        type: grb
         number: 479
         default_on_color: blue
     l_p2_97:
+        type: grb
         number: 480
         default_on_color: blue
     l_p2_98:
+        type: grb
         number: 481
         default_on_color: blue
     l_p2_99:
+        type: grb
         number: 482
         default_on_color: blue
     l_p2_100:
+        type: grb
         number: 483
         default_on_color: blue
     l_p2_101:
+        type: grb
         number: 484
         default_on_color: blue
     l_p2_102:
+        type: grb
         number: 485
         default_on_color: blue
     l_p2_103:
+        type: grb
         number: 486
         default_on_color: blue
     l_p2_104:
+        type: grb
         number: 487
         default_on_color: blue
     l_p2_105:
+        type: grb
         number: 488
         default_on_color: blue
     l_p2_106:
+        type: grb
         number: 489
         default_on_color: blue
     l_p2_107:
+        type: grb
         number: 490
         default_on_color: blue
     l_p2_108:
+        type: grb
         number: 491
         default_on_color: blue
     l_p2_109:
+        type: grb
         number: 492
         default_on_color: blue
     l_p2_110:
+        type: grb
         number: 493
         default_on_color: blue
     l_p2_111:
+        type: grb
         number: 494
         default_on_color: blue
     l_p2_112:
+        type: grb
         number: 495
         default_on_color: blue
     l_p2_113:
+        type: grb
         number: 496
         default_on_color: blue
     l_p2_114:
+        type: grb
         number: 497
         default_on_color: blue
     l_p2_115:
+        type: grb
         number: 498
         default_on_color: blue
     l_p2_116:
+        type: grb
         number: 499
         default_on_color: blue
     l_p2_117:
+        type: grb
         number: 500
         default_on_color: blue
     l_p2_118:
+        type: grb
         number: 501
         default_on_color: blue
     l_p2_119:
+        type: grb
         number: 502
         default_on_color: blue
     l_p2_120:
+        type: grb
         number: 503
         default_on_color: blue
+
