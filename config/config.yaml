@@ -68,7 +68,7 @@ ball_devices:
         ball_switches: s_drain
         eject_coil: c_drain_eject
         debug: true
-        tags: drain, home, trough, ball_add_live
+        tags: drain, home, trough
 
 queue_relay_player:
     balldevice_bd_drain_ball_eject_attempt:
@@ -99,31 +99,31 @@ switches:
         tags: playfield_active
     s_drop_6:
         number: 1-20
-        tags: playfield_active
+        # tags: playfield_active
     s_drop_5:
         number: 1-21
-        tags: playfield_active
+        # tags: playfield_active
     s_drop_5b:
         number: 1-22
-        tags: playfield_active
+        # tags: playfield_active
     s_drop_4:
         number: 1-23
-        tags: playfield_active
+        # tags: playfield_active
     s_drop_ace:
         number: 1-24
-        tags: playfield_active
+        # tags: playfield_active
     s_drop_2:
         number: 1-25
-        tags: playfield_active
+        # tags: playfield_active
     s_drop_3:
         number: 1-26
-        tags: playfield_active
+        # tags: playfield_active
     s_drop_6_right:
         number: 1-27
-        tags: playfield_active
+        # tags: playfield_active
     s_drop_9:
         number: 1-28
-        tags: playfield_active
+        # tags: playfield_active
     s_extra_ball:
         number: 1-29
         tags: playfield_active
@@ -165,35 +165,33 @@ switches:
         tags: tilt_warning
     s_sling:
         number: 0-2
-        tags: playfield_active
+        # tags: playfield_active
     s_pop_left:
         number: 0-0
-        tags: playfield_active
+        # tags: playfield_active
     s_pop_right:
         number: 0-1
-        tags: playfield_active
+        # tags: playfield_active
 # 
 #
 coils:
     c_drain_eject:
         number: 1-7
-        default_pulse_ms: 200
+        default_pulse_ms: 250
     c_flipper_left_main:
         number: 1-0
         default_pulse_ms: 50ms
-        default_hold_power: 1.0
+        default_hold_power: 0.15
     # c_flipper_left_hold:
-    #     number: 1-1
-    #     pulse_ms: 250
-    #     hold_power16: 15
+        # number: 1-1
+        allow_enable: true   
     c_flipper_right_main:
         number: 1-2
         default_pulse_ms: 50ms
-        default_hold_power: 1.0
+        default_hold_power: 0.15
     # c_flipper_right_hold:
-    #     number: 1-3
-    #     pulse_ms: 250
-    #     hold_power16: 15
+        # number: 1-3
+        allow_enable: true   
     c_sling:
         number: 0-2
         default_pulse_ms: 40
