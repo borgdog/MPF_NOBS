@@ -8,7 +8,7 @@ mode:
     restart_on_next_ball: true
     stop_events: 
         award_heels
-        sw_playfield_active
+        playfield_active
     priority: 500
 
 ball_saves:

@@ -1,5 +1,5 @@
 #config_version=5
-# NOBS
+# NObS
 
 mode:
     start_events: ball_starting
@@ -35,7 +35,7 @@ timers:
         debug: true
         
 
-scoring:
+variable_player:
 
     star1_hit{device.achievements.litstar1.state=='completed'}:
         score: 1 * current_player.dpegs
@@ -50,17 +50,17 @@ scoring:
 
     player_score:     #add gamescore when scoring
         gamescore:
-            score: change
+            int: change
             action: add
     
     player_games{current_player.number==1}:
         player1games:
-            score: change
+            int: change
             action: add_machine
 
     player_games{current_player.number==2}:
         player2games:
-            score: change
+            int: change
             action: add_machine
 
     
@@ -68,53 +68,54 @@ scoring:
         gameswon: 1
         games: 1
         gamescore:              #RESET FOR SINGLE PLaYER GaME
-            score: 0
+            int: 0
             action: set
 
     player_gameswon{game.num_players==2 and player_num==1}:   
         skunks: 
-            score: 1 if players[1].gamescore<91 else 0             # CHECK FOR SKUNK PLaYER 1 WON
+            int: 1 if players[1].gamescore<91 else 0             # cHEcK FOR SKUNK PLaYER 1 WON
             action: set
 
     player_gameswon{game.num_players==2 and player_num==2}:   
         skunks: 
-            score: 1 if players[0].gamescore<91 else 0             # CHECK FOR SKUNK PLaYER 2 WON
+            int: 1 if players[0].gamescore<91 else 0             # cHEcK FOR SKUNK PLaYER 2 WON
             action: set
 
     player_skunks{current_player.skunks==1 and player_num==1}:
-        games: 3 if players[1].gamescore<61 else 1              # CHECK FOR DOUBLE SKUNK IF SKUNK
+        games: 3 if players[1].gamescore<61 else 1              # cHEcK FOR dOUbLE SKUNK IF SKUNK
         gamereset: 1
 
     player_skunks{current_player.skunks==1 and player_num==2}:
-        games: 3 if players[0].gamescore<61 else 1              # CHECK FOR DOUBLE SKUNK IF SKUNK SCORE
+        games: 3 if players[0].gamescore<61 else 1              # cHEcK FOR dOUbLE SKUNK IF SKUNK ScORE
         gamereset: 1
     
     player_skunks{current_player.skunks==0}:    # INITIaTE RESET IF NO SKUNKS
         gamereset: 1
  
-    player_gamereset{game.num_players==2}: #RESET GaME SCORES aFTER GaME WON on 2 player games
+    player_gamereset{game.num_players==2}: #RESET GaME ScORES aFTER GaME WON on 2 player games
         resetplayer1: 1
         resetplayer2: 1
         
     player_resetplayer1:
         gamescore:
-            score: 0
+            int: 0
             player: 1
             action: set
 
     player_resetplayer2:
         gamescore:
-            score: 0
+            int: 0
             player: 2
             action: set
     
     dp_pegs:
         dpegs:
-            score: 2
+            int: 2
             action: set
+            
     ball_drain:
         dpegs:
-            score: 1
+            int: 1
             action: set
 
     award_heels:
@@ -223,22 +224,22 @@ shots:
     droptarget_6:
         switch: s_drop_6
         show_tokens:
-            led: l_handB6
+            led: l_handb6
         profile: p_offon
     droptarget_5:
         switch: s_drop_5
         show_tokens:
-            led: l_handB5
+            led: l_handb5
         profile: p_offon
     droptarget_5b:
         switch: s_drop_5b
         show_tokens:
-            led: l_handB5b
+            led: l_handb5b
         profile: p_offon
     droptarget_4:    
         switch: s_drop_4
         show_tokens:
-            led: l_handB4
+            led: l_handb4
         profile: p_offon
     droptarget_6b:
         switch: s_drop_6_right

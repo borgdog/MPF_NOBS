@@ -3,7 +3,7 @@
 
 high_score:
   _overwrite: True
-  categories:
+  categories: !!omap
   - score:
       - HI_PEG
   - games:

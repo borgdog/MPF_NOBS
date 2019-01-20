@@ -16,7 +16,7 @@ counters:
         persist_state: true
         disable_on_complete: false
 
-scoring:
+variable_player:
     extraball_hit:      
         score: 1 * current_player.dpegs
 
