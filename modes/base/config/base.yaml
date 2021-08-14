@@ -1,5 +1,5 @@
 #config_version=5
-# NObS
+# NOBS
 
 mode:
     start_events: ball_starting
@@ -16,9 +16,17 @@ counters:
         reset_on_complete: false
         restart_events: ball_save_bs_disabled
 
+#############################################################
+# BALL SAVE
+#############################################################
+
 ball_saves:
     bs:
         enable_events: extra_ball_hit
+
+#############################################################
+# TIMERS
+#############################################################
 
 timers:
     ejecttimer:
@@ -34,6 +42,34 @@ timers:
               action: restart
         debug: true
         
+
+#############################################################
+# SEGMENT PLAYER:  update score displays
+#############################################################
+
+segment_display_player:
+  mode_skill_shot_stopped: 
+    upperpegs:
+      flashing: off
+      color: 00acf0
+      text: "{players[0].score:0>2}"
+    uppergames:
+      flashing: off
+      color: 00acf0
+      text: "{players[0].games:,d}"
+  mode_skill_shot_stopped{game.num_players==2}:
+    lowerpegs:
+      flashing: off
+      color: 00acf0
+      text:  "{players[1].score:0>2}"
+    lowergames:
+      flashing: off
+      color: 00acf0
+      text:  "{players[1].games:,d}"
+
+#############################################################
+# VARIABLE PLAYER:  scoring!!!
+#############################################################
 
 variable_player:
 
@@ -469,9 +505,6 @@ achievement_groups:
         achievements: dp_handa, dp_handb, dp_handc, dp_handd
         events_when_all_completed: dp_pegs
 
-slide_player:
-  mode_base_started: nobs_running_slide
-  player_gameswon: nobs_running_slide
 
 show_player:
 

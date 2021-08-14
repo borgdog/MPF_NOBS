@@ -1,0 +1,100 @@
+#config_version=5
+#  NOBS 
+
+switches:
+    s_left_flipper:
+        number: 1-0
+        tags: left_flipper
+    s_right_flipper:
+        number: 1-2
+        tags: right_flipper
+    s_drain:
+        number: 1-16
+        tags: drain
+    s_start:
+        number: 0-25
+        tags: start
+    s_left_inlane:
+        number: 1-18
+        tags: skill_cancel
+    s_left_outlane:
+        number: 1-17
+        tags: skill_cancel
+    s_right_outlane:
+        number: 1-19
+        tags: skill_cancel
+    s_drop_6:
+        number: 1-20
+        tags: skill_cancel
+    s_drop_5:
+        number: 1-21
+        tags: skill_cancel
+    s_drop_5b:
+        number: 1-22
+        tags: skill_cancel
+    s_drop_4:
+        number: 1-23
+        tags: skill_cancel
+    s_drop_ace:
+        number: 1-24
+        tags: skill_cancel
+    s_drop_2:
+        number: 1-25
+        tags: skill_cancel
+    s_drop_3:
+        number: 1-26
+        tags: skill_cancel
+    s_drop_6_right:
+        number: 1-27
+        tags: skill_cancel
+    s_drop_9:
+        number: 1-28
+        tags: skill_cancel
+    s_extra_ball:
+        number: 1-29
+        tags: skill_cancel
+    s_ro_2:
+        number: 1-30
+        tags: skill_cancel
+    s_ro_king:
+        number: 0-21
+        tags: skill_cancel
+    s_ro_queen:
+        number: 0-22
+        tags: skill_cancel
+    s_ro_jack:
+        number: 0-23
+        tags: skill_cancel
+    s_star1:
+        number: 0-16
+        tags: skill_cancel
+    s_star2:
+        number: 0-17
+        tags: skill_cancel
+    s_star3:
+        number: 0-18
+        tags: skill_cancel
+    s_star4:
+        number: 0-19
+        tags: skill_cancel
+    s_star5:
+        number: 0-20
+        tags: skill_cancel
+    s_roto:
+        number: 0-24
+        tags: skill_cancel
+    s_dingwalls:
+        number: 0-26
+        tags: skill_cancel
+    s_tiltbob:
+        number: 0-27
+        tags: tilt_warning
+    s_sling:
+        number: 0-2
+        tags: skill_cancel
+    s_pop_left:
+        number: 0-0
+        tags: skill_cancel
+    s_pop_right:
+        number: 0-1
+        tags: skill_cancel

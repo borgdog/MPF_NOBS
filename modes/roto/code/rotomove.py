@@ -10,34 +10,34 @@ class RotoMove(Mode):
 
 
     def moveit(self, **kwargs):
-        self.log.info('rotopos start -> '+str(self.machine.get_machine_var('rotopos')))
+        self.log.info('rotopos start -> '+str(self.machine.variables.get_machine_var('rotopos')))
         self.log.info('rotocount start -> '+str (self.machine.counters.rotocount.value))
-        if self.machine.get_machine_var('rotodir') == 1:                               #turning counterclockwise
-            if self.machine.get_machine_var('rotopos') + self.machine.counters.rotocount.value > 39:                    #will go past end?
-               self.machine.set_machine_var('rotodir', -1)                                    #reverse direction
-               self.machine.set_machine_var('rotopos',(self.machine.get_machine_var('rotopos') - self.machine.counters.rotocount.value)) 
+        if self.machine.variables.get_machine_var('rotodir') == 1:                               #turning counterclockwise
+            if self.machine.variables.get_machine_var('rotopos') + self.machine.counters.rotocount.value > 39:                    #will go past end?
+               self.machine.variables.set_machine_var('rotodir', -1)                                    #reverse direction
+               self.machine.variables.set_machine_var('rotopos',(self.machine.variables.get_machine_var('rotopos') - self.machine.counters.rotocount.value)) 
             else:                                            #not past end
-               self.machine.set_machine_var('rotopos',(self.machine.get_machine_var('rotopos') + self.machine.counters.rotocount.value))
+               self.machine.variables.set_machine_var('rotopos',(self.machine.variables.get_machine_var('rotopos') + self.machine.counters.rotocount.value))
         else:                                           #turning clockwise
-            if self.machine.get_machine_var('rotopos') - self.machine.counters.rotocount.value < 1:                      #will go past end?
-               self.machine.set_machine_var('rotodir',1)                                     #reverse direction
-               self.machine.set_machine_var('rotopos',(self.machine.get_machine_var('rotopos') + self.machine.counters.rotocount.value))
+            if self.machine.variables.get_machine_var('rotopos') - self.machine.counters.rotocount.value < 1:                      #will go past end?
+               self.machine.variables.set_machine_var('rotodir',1)                                     #reverse direction
+               self.machine.variables.set_machine_var('rotopos',(self.machine.variables.get_machine_var('rotopos') + self.machine.counters.rotocount.value))
             else:                                           #not past end
-               self.machine.set_machine_var('rotopos',(self.machine.get_machine_var('rotopos') - self.machine.counters.rotocount.value))
+               self.machine.variables.set_machine_var('rotopos',(self.machine.variables.get_machine_var('rotopos') - self.machine.counters.rotocount.value))
 
-        self.log.info('rotopos end -> '+str(self.machine.get_machine_var('rotopos')))
+        self.log.info('rotopos end -> '+str(self.machine.variables.get_machine_var('rotopos')))
 
         self.delay.add(name='move_now', ms=500, callback=self.reallymove) #move the roto after 1/2 second
      
     def reallymove(self, **kwargs):
-        if self.machine.get_machine_var('rotopos') > 26:
-           self.machine.set_machine_var('roto',(self.machine.get_machine_var('rotopos') - 26))
-        elif self.machine.get_machine_var('rotopos') > 13:
-           self.machine.set_machine_var('roto',(self.machine.get_machine_var('rotopos') - 13)) 
+        if self.machine.variables.get_machine_var('rotopos') > 26:
+           self.machine.variables.set_machine_var('roto',(self.machine.variables.get_machine_var('rotopos') - 26))
+        elif self.machine.variables.get_machine_var('rotopos') > 13:
+           self.machine.variables.set_machine_var('roto',(self.machine.variables.get_machine_var('rotopos') - 13)) 
         else:
-           self.machine.set_machine_var('roto',self.machine.get_machine_var('rotopos'))
+           self.machine.variables.set_machine_var('roto',self.machine.variables.get_machine_var('rotopos'))
 
-        self.log.info('rotopos end -> '+str(self.machine.get_machine_var('rotopos')))
+        self.log.info('rotopos end -> '+str(self.machine.variables.get_machine_var('rotopos')))
         self.log.info('rotocount end -> '+str (self.machine.counters.rotocount.value))
 
         # self.machine.events.post('machine_var_roto')

@@ -28,7 +28,7 @@
               - property: opacity
                 value: 1
                 duration: .25s
-                repeat: -1
+                repeat: true
 
         - type: text
           x: 1230
@@ -48,7 +48,7 @@
               - property: opacity
                 value: 1
                 duration: .25s
-                repeat: -1
+                repeat: true
           
         - type: text
           text: ST
@@ -68,7 +68,7 @@
               - property: opacity
                 value: 1
                 duration: .25s
-                repeat: -1
+                repeat: true
 
         - type: text
           text: ART
@@ -88,7 +88,7 @@
               - property: opacity
                 value: 1
                 duration: .25s
-                repeat: -1
+                repeat: true
 
 - duration: 4
   slides:

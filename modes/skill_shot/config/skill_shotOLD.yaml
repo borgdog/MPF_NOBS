@@ -1,0 +1,89 @@
+#config_version=5
+# NOBS
+#
+#   Skill shot mode: hit flashing top lane on plunge to be awarded 'heels', 2 pegs.
+
+mode:
+    start_events: ball_starting
+    restart_on_next_ball: true
+    stop_events: 
+        - award_heels
+        - sw_playfield_active
+    priority: 500
+
+ball_saves:
+    skill_bs:
+        enable_events: sw_drain_active
+        active_time: 1s
+
+achievements:
+    skill_king:
+        show_tokens:
+            leds: l_topk
+        show_when_enabled: off
+        show_when_selected: skillflash
+        show_when_completed: off
+        complete_events: s_ro_king_active
+        events_when_completed: award_heels
+        reset_events: sw_playfield_active
+
+    skill_queen:
+        show_tokens:
+            leds: l_topq
+        show_when_enabled: off
+        show_when_selected: skillflash
+        show_when_completed: off
+        complete_events: s_ro_queen_active
+        events_when_completed: award_heels  
+        reset_events: sw_playfield_active
+      
+    skill_jack:
+        show_tokens:
+            leds: l_topj
+        show_when_enabled: off
+        show_when_selected: skillflash
+        show_when_completed: off
+        complete_events: s_ro_jack_active
+        events_when_completed: award_heels
+        reset_events: sw_playfield_active
+
+achievement_groups:
+    skillshot:
+        achievements:
+            - skill_jack
+            - skill_queen
+            - skill_king
+        auto_select: yes
+        select_random_achievement_events: mode_skill_shot_starting
+        enable_events: ball_starting
+
+
+shows:
+    skillflash:
+    - duration: .25
+      lights:
+        (leds): blue
+    - duration: .25
+      lights:
+        (leds): off
+
+#############################################################
+# SEGMENT PLAYER:  update score displays
+#############################################################
+
+segment_display_player:
+    mode_skill_shot_started{current_player.number==1}: 
+        upperpegs:
+            flashing: all
+            text: "{players[0].score:0>2}"
+        uppergames:
+            flashing: all
+            text: "{players[0].games:,d}"
+
+    mode_skill_shot_started{current_player.number==2}: 
+        lowerpegs:
+            flashing: all
+            text: "{players[1].score:0>2}"
+        lowergames:
+            flashing: all
+            text: "{players[1].games:,d}"

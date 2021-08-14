@@ -5,7 +5,7 @@ show_player:
   mode_attract_started: 
     attract_light_show:
       speed: 8
-    attract_text_show:
+    attract_seg_show:
       speed: 1
     attract_board_show:
       speed: 20

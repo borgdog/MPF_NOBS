@@ -1,230 +1,113 @@
 #config_version=5
 # NOBS
 #
-#   Skill shot mode: hit flashing top lane on plunge to be awarded 'heels', 2 pegs.
+#   Skill shot mode: hit flashing top lane on plunge to be awarded 10,000 points.
 
 mode:
     start_events: ball_starting
-    restart_on_next_ball: true
     stop_events: 
-        award_heels
-        playfield_active
-    priority: 500
+        - award_heels
+        - sw_skill_cancel
+    priority: 200
 
-ball_saves:
-    skill_bs:
-        enable_events: sw_drain_active
-        active_time: 1s
+        
+#############################################################
+# SHOTS
+#############################################################
 
-achievements:
-    skill_king:
+shots:
+    skill_shot_l:
+        advance_events: skill_advance_1
+        switch: s_ro_king
+        profile: p_skill_shot
         show_tokens:
             leds: l_topk
-        show_when_enabled: off
-        show_when_selected: skillflash
-        show_when_completed: off
-        complete_events: s_ro_king_active
-        events_when_completed: award_heels
-        reset_events: sw_playfield_active
-
-    skill_queen:
+    skill_shot_m:
+        advance_events: skill_advance_2
+        switch: s_ro_queen
+        profile: p_skill_shot
         show_tokens:
             leds: l_topq
-        show_when_enabled: off
-        show_when_selected: skillflash
-        show_when_completed: off
-        complete_events: s_ro_queen_active
-        events_when_completed: award_heels  
-        reset_events: sw_playfield_active
-      
-    skill_jack:
+    skill_shot_r:
+        advance_events: skill_advance_3
+        switch: s_ro_jack
+        profile: p_skill_shot
         show_tokens:
             leds: l_topj
-        show_when_enabled: off
-        show_when_selected: skillflash
-        show_when_completed: off
-        complete_events: s_ro_jack_active
-        events_when_completed: award_heels
-        reset_events: sw_playfield_active
 
-achievement_groups:
-    skillshot:
-        achievements:
-            skill_jack
-            skill_queen
-            skill_king
-        auto_select: yes
-        select_random_achievement_events: mode_skill_shot_starting
-        enable_events: ball_starting
+#############################################################
+# BALL SAVE
+#############################################################
+ball_saves:
+    skill_shot_bs:
+        balls_to_save: -1
+        auto_launch: true
 
-slide_player:
-    mode_skill_shot_started{current_player.number==1}: player1up
-    mode_skill_shot_started{current_player.number==2}: player2up
+#############################################################
+# SHOT PROFILES
+#############################################################
 
-shows:
-    skillflash:
-    - duration: .25
-      lights:
-        (leds): blue
-    - duration: .25
-      lights:
-        (leds): off
+shot_profiles:
+    p_skill_shot:
+        block: false   #CLEAR LANE HIT
+        advance_on_hit: false
+        states:
+            - name: unlit
+              show: off
+            - name: lit
+              show: flash
+              loops: -1
+              speed: 4
+            - name: hit
+              show: on
 
-slides:
-    player1up:
-        widgets:
+#############################################################
+# SHOT GROUPS
+#############################################################
 
-            - type: image
-              image: nobs_bg
-              z: 3
-
-            - type: text
-              text: (player1|score)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 620
-              y: 724
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
-              animations:
-                  pre_show_slide:
-                    - property: opacity
-                      value: 0
-                      duration: .5s
-                    - property: opacity
-                      value: 1
-                      duration: .5s
-                      repeat: -1
-                      
-            - type: text
-              text: (player1|games)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 1230
-              y: 724
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
-
-            - type: text
-              text: (player2|score)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 620
-              y: 68
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
-
-            - type: text
-              text: (player2|games)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 1230
-              y: 68
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
-
-            - type: text
-              text: (ball)
-              font_name: Ten_segment
-              color: blue
-              x: 660
-              y: 422       
-              anchor_x: left
-              anchor_y: bottom
-              font_size: 145
-              z: 4
-
-    player2up:
-        widgets:
-            - type: image
-              image: nobs_bg
-              z: 3
-
-            - type: text
-              text: (player1|score)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 620
-              y: 724
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
-                      
-            - type: text
-              text: (player1|games)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 1230
-              y: 724
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
-
-            - type: text
-              text: (player2|score)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 620
-              y: 68
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
-              animations:
-                  pre_show_slide:
-                    - property: opacity
-                      value: 0
-                      duration: .5s
-                    - property: opacity
-                      value: 1
-                      duration: .5s
-                      repeat: -1
+shot_groups:
+    skill_shot:
+        shots: skill_shot_l, skill_shot_m, skill_shot_r
+        reset_events: mode_skill_shot_starting
 
 
-            - type: text
-              text: (player2|games)
-              number_grouping: true
-              min_digits: 2
-              font_name: Ten_segment
-              color: blue
-              x: 1230
-              y: 68
-              font_size: 240
-              anchor_x: right
-              anchor_y: bottom
-              z: 4
+#############################################################
+# RANDOM EVENT PLAYER:  select random shot for skill shot
+#############################################################
 
-            - type: text
-              text: (ball)
-              font_name: Ten_segment
-              color: blue
-              x: 660
-              y: 422        
-              anchor_x: left
-              anchor_y: bottom
-              font_size: 145
-              z: 4
+random_event_player:              
+    mode_skill_shot_started:
+        events:
+            - skill_advance_1
+            - skill_advance_2
+            - skill_advance_3
+
+#############################################################
+# EVENT PLAYER:  play events when events occur :)
+#############################################################
+
+event_player:
+    skill_shot_unlit_hit: sw_skill_cancel
+    skill_shot_lit_hit: award_heels
+
+#############################################################
+# SEGMENT PLAYER:  update score displays
+#############################################################
+
+segment_display_player:
+    mode_skill_shot_started{current_player.number==1}: 
+        upperpegs:
+            flashing: all
+            text: "{players[0].score:0>2}"
+        uppergames:
+            flashing: all
+            text: "{players[0].games:,d}"
+
+    mode_skill_shot_started{current_player.number==2}: 
+        lowerpegs:
+            flashing: all
+            text: "{players[1].score:0>2}"
+        lowergames:
+            flashing: all
+            text: "{players[1].games:,d}"
+    

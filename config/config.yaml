@@ -1,10 +1,15 @@
 #config_version=5
 # NOBS 
 
+mpf:
+    report_crashes: never
+
 config:
     - leds.yaml
     - keys.yaml
     - servos.yaml
+    - switches.yaml
+    - displays.yaml
 
 scriptlets: 
     cboard.Cboard
@@ -75,104 +80,7 @@ queue_relay_player:
         post: timetoeject
         wait_for: timer_ejecttimer_complete
 
-switches:
-    s_left_flipper:
-        number: 1-0
-        tags: left_flipper
-    s_right_flipper:
-        number: 1-2
-        tags: right_flipper
-    s_drain:
-        number: 1-16
-        tags: drain
-    s_start:
-        number: 0-25
-        tags: start
-    s_left_inlane:
-        number: 1-18
-        tags: playfield_active
-    s_left_outlane:
-        number: 1-17
-        tags: playfield_active
-    s_right_outlane:
-        number: 1-19
-        tags: playfield_active
-    s_drop_6:
-        number: 1-20
-        # tags: playfield_active
-    s_drop_5:
-        number: 1-21
-        # tags: playfield_active
-    s_drop_5b:
-        number: 1-22
-        # tags: playfield_active
-    s_drop_4:
-        number: 1-23
-        # tags: playfield_active
-    s_drop_ace:
-        number: 1-24
-        # tags: playfield_active
-    s_drop_2:
-        number: 1-25
-        # tags: playfield_active
-    s_drop_3:
-        number: 1-26
-        # tags: playfield_active
-    s_drop_6_right:
-        number: 1-27
-        # tags: playfield_active
-    s_drop_9:
-        number: 1-28
-        # tags: playfield_active
-    s_extra_ball:
-        number: 1-29
-        tags: playfield_active
-    s_ro_2:
-        number: 1-30
-        tags: playfield_active
-    s_ro_king:
-        number: 0-21
-        tags: playfield_active
-    s_ro_queen:
-        number: 0-22
-        tags: playfield_active
-    s_ro_jack:
-        number: 0-23
-        tags: playfield_active
-    s_star1:
-        number: 0-16
-        tags: playfield_active
-    s_star2:
-        number: 0-17
-        tags: playfield_active
-    s_star3:
-        number: 0-18
-        tags: playfield_active
-    s_star4:
-        number: 0-19
-        tags: playfield_active
-    s_star5:
-        number: 0-20
-        tags: playfield_active
-    s_roto:
-        number: 0-24
-        tags: playfield_active
-    s_dingwalls:
-        number: 0-26
-        tags: playfield_active
-    s_tiltbob:
-        number: 0-27
-        tags: tilt_warning
-    s_sling:
-        number: 0-2
-        # tags: playfield_active
-    s_pop_left:
-        number: 0-0
-        # tags: playfield_active
-    s_pop_right:
-        number: 0-1
-        # tags: playfield_active
-# 
+
 #
 coils:
     c_drain_eject:
@@ -214,28 +122,28 @@ coils:
         number: 0-7
         default_pulse_ms: 40
         pulse_events:
-            player_games
+            - player_games
     c_chime10:
         number: 0-4
         default_pulse_ms: 20
         pulse_events:
-            dingwalls_hit
-            slings_hit
-            handa_hit
-            handb_hit
-            handc_hit
-            handd_hit
+            - dingwalls_hit
+            - slings_hit
+            - handa_hit
+            - handb_hit
+            - handc_hit
+            - handd_hit
     c_chime100:
         number: 0-5
         default_pulse_ms: 20
         pulse_events:
-            s_pop_left_active
-            s_pop_right_active
+            - s_pop_left_active
+            - s_pop_right_active
     c_chime1000:
         number: 0-6
         default_pulse_ms: 20
         pulse_events:
-            player_score{value>0}
+            - player_score{value>0}
 #
 autofire_coils:
   slingshot:
@@ -300,6 +208,9 @@ flippers:
         # hold_coil: c_flipper_right_hold
         activation_switch: s_right_flipper
 #
+#############################################################
+# SHOW PLAYER:  play shows on events
+#############################################################
 
 show_player:
     player_added{num==1}: 
@@ -309,87 +220,65 @@ show_player:
         chimeinit2:
             loops: 0
 
-#
-displays:
-  window:
-    width: 1280
-    height: 1024
-#
-window:
-  title: NOBS
-  width: 1280
-  height: 1024    
-  resizable: false
-  fullscreen: false
-  borderless: true
-  exit_on_escape: true
-  source_display: window
-#
-slides:
 
-  nobs_running_slide:
-    widgets:
-      - type: image
-        image: nobs_bg
-        z: 1
-      - type: text
-        text: (player1|score)
-        number_grouping: true
-        min_digits: 2
-        font_name: Ten_segment
-        color: blue
-        x: 620
-        y: 724
-        font_size: 240
-        anchor_x: right
-        anchor_y: bottom
-        z: 2
-      - type: text
-        text: (player1|games)
-        number_grouping: true
-        min_digits: 2
-        font_name: Ten_segment
-        color: blue
-        x: 1230
-        y: 724        
-        font_size: 240
-        anchor_x: right
-        anchor_y: bottom
-        z: 2
+#############################################################
+# SLIDE PLAYER:  play slides on events
+#############################################################
 
-      - type: text
-        text: (player2|score)
-        number_grouping: true
-        min_digits: 2
-        font_name: Ten_segment
-        color: blue
-        x: 620
-        y: 68        
-        font_size: 240
-        anchor_x: right
-        anchor_y: bottom
-        z: 2
-      - type: text
-        text: (player2|games)
-        number_grouping: true
-        min_digits: 2
-        font_name: Ten_segment
-        color: blue
-        x: 1230
-        y: 68        
-        font_size: 240
-        anchor_x: right
-        anchor_y: bottom
-        z: 2
+slide_player:
+    mc_ready: # when the mc (Media Center) is ready start the...
+        layout: # layout slide on the..
+            target: window # ENTIRE Window
 
-      - type: text
-        text: (ball)
-        font_name: Ten_segment
-        color: blue
-        x: 660
-        y: 422        
-        anchor_x: left
-        anchor_y: bottom
-        font_size: 145
-        z: 2
-#
+    init_done:    #when init is done put the base images up
+        background:
+            target: backglass
+        upperpegssegment:
+            target: upperpegsdisplay
+        uppergamessegment:
+            target: uppergamesdisplay
+        lowerpegssegment:
+            target: lowerpegsdisplay
+        lowergamessegment:
+            target: lowergamesdisplay
+        bipsegment:
+            target: bipdisplay
+  
+    game_starting:
+        background_lit:
+            target: backglass
+    game_ended:
+        background:
+            target: backglass
+
+
+
+#############################################################
+# SEGMENT PLAYER:  update score displays
+#############################################################
+
+segment_display_player:
+  update_segment_display_score:
+    upperpegs:
+      flashing: off
+      color: 00acf0
+      text: "{players[0].score:0>2}"
+    uppergames:
+      flashing: off
+      color: 00acf0
+      text: "{players[0].games:,d}"
+    lowerpegs:
+      flashing: off
+      color: 00acf0
+      text:  "{players[1].score:0>2}"
+    lowergames:
+      flashing: off
+      color: 00acf0
+      text:  "{players[1].games:,d}"
+  ball_started:
+    bipseg:
+      color: 00acf0
+      text: "{current_player.ball:d}"
+  game_ending:
+    bipseg:
+      text: ""

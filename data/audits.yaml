@@ -1,9 +1,9 @@
 events:
-  game_ended: 232
-  game_started: 937
+  game_ended: 0
+  game_started: 1
 player:
   score:
-    average: 36.670682730923694
+    average: 36.616
     top:
     - 2000
     - 1100
@@ -15,82 +15,84 @@ player:
     - 100
     - 94
     - 92
-    total: 249
+    total: 250
 shots:
   dingwalls: 3201
-  droptarget_2: 431
-  droptarget_3: 390
-  droptarget_4: 344
-  droptarget_5: 330
-  droptarget_5b: 325
-  droptarget_6: 371
-  droptarget_6b: 250
-  droptarget_9: 230
+  droptarget_2: 434
+  droptarget_3: 391
+  droptarget_4: 354
+  droptarget_5: 341
+  droptarget_5b: 334
+  droptarget_6: 379
+  droptarget_6b: 252
+  droptarget_9: 232
   droptarget_A: 185
-  droptarget_a: 264
+  droptarget_a: 268
   dt_6: 1
   extra_ball: 22
-  extraball: 245
-  left_inlane: 413
-  left_inlane2: 408
+  extraball: 253
+  left_inlane: 415
+  left_inlane2: 410
   left_inlane3: 163
-  left_outlane: 350
-  left_outlane2: 347
-  right_2: 342
-  right_22: 341
-  right_outlane: 289
-  right_outlane2: 289
+  left_outlane: 358
+  left_outlane2: 355
+  right_2: 346
+  right_22: 345
+  right_outlane: 293
+  right_outlane2: 293
   right_outlane3: 137
-  rototarget: 249
+  rototarget: 309
+  skill_shot_m: 1
+  skill_shot_r: 2
   slings: 852
-  star1: 158
-  star2: 371
-  star3: 392
-  star4: 272
-  star5: 313
-  top_jack: 611
-  top_jack2: 611
+  star1: 162
+  star2: 374
+  star3: 393
+  star4: 273
+  star5: 314
+  top_jack: 628
+  top_jack2: 628
   top_jack3: 315
-  top_king: 451
-  top_king2: 451
+  top_king: 467
+  top_king2: 467
   top_king3: 259
-  top_queen: 526
-  top_queen2: 526
+  top_queen: 546
+  top_queen2: 546
   top_queen3: 260
 switches:
   s_coin: 1
   s_dingwalls: 3204
-  s_drain: 2254
-  s_drop_2: 432
-  s_drop_3: 394
-  s_drop_4: 347
-  s_drop_5: 331
-  s_drop_5b: 327
-  s_drop_6: 375
-  s_drop_6_right: 258
-  s_drop_9: 234
-  s_drop_ace: 450
-  s_extra_ball: 253
+  s_drain: 2265
+  s_drop_2: 435
+  s_drop_3: 395
+  s_drop_4: 357
+  s_drop_5: 342
+  s_drop_5b: 336
+  s_drop_6: 383
+  s_drop_6_right: 260
+  s_drop_9: 236
+  s_drop_ace: 454
+  s_extra_ball: 261
   s_left_flipper: 4967
-  s_left_inlane: 424
-  s_left_outlane: 353
+  s_left_inlane: 426
+  s_left_outlane: 361
   s_lefteos_flipper: 0
   s_pop_left: 1251
-  s_pop_right: 1643
-  s_right_flipper: 5616
-  s_right_outlane: 291
+  s_pop_right: 1649
+  s_right_flipper: 5618
+  s_right_outlane: 295
   s_righteos_flipper: 0
-  s_ro_2: 345
-  s_ro_jack: 616
-  s_ro_king: 453
-  s_ro_queen: 530
-  s_roto: 252
+  s_ro_2: 349
+  s_ro_jack: 633
+  s_ro_king: 469
+  s_ro_queen: 550
+  s_roto: 314
   s_sling: 855
-  s_star1: 158
-  s_star2: 374
-  s_star3: 395
-  s_star4: 274
-  s_star5: 314
-  s_start: 258
+  s_star1: 162
+  s_star2: 377
+  s_star3: 396
+  s_star4: 275
+  s_star5: 315
+  s_start: 262
   s_tilt: 1
-  s_tiltbob: 62
+  s_tiltbob: 65

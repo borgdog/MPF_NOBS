@@ -1,0 +1,105 @@
+#show_version=5
+# NOBS
+
+- duration: 4
+  segment_displays:
+    upperpegs:
+      flashing: all
+      color: 00acf0
+      text: "PRE"
+    uppergames:
+      flashing: all
+      color: 00acf0
+      text: "SS "
+
+    lowerpegs:
+      flashing: all
+      color: 00acf0
+      text: " ST"
+    lowergames:
+      flashing: all
+      color: 00acf0
+      text: "ART"
+
+- duration: 4
+  segment_displays:
+    upperpegs:
+      flashing: off
+      color: 00acf0
+      text: "{machine.player1_score:,d}"
+
+    uppergames:
+      flashing: off
+      color: 00acf0
+      text: "{machine.player1_games:,d}"
+
+    lowerpegs:
+      flashing: off
+      color: 00acf0
+      text:  "{machine.player2_score:,d}"
+    
+    lowergames:
+      flashing: off
+      color: 00acf0
+      text:  "{machine.player2_games:,d}"
+
+- duration: 2
+  segment_displays:
+    upperpegs:
+      flashing: all
+      color: 00acf0
+      text: "PRE"
+    uppergames:
+      flashing: all
+      color: 00acf0
+      text: "SS "
+
+    lowerpegs:
+      flashing: all
+      color: 00acf0
+      text: " ST"
+    lowergames:
+      flashing: all
+      color: 00acf0
+      text: "ART"
+
+- duration: 2
+  segment_displays:
+    upperpegs:
+      flashing: off
+      color: 00acf0
+      text: "CHA"
+
+    uppergames:
+      flashing: off
+      color: 00acf0
+      text: "MPS"
+
+    lowerpegs:
+      flashing: off
+      color: 00acf0
+      text: " "
+      
+    lowergames:
+      flashing: off
+      color: 00acf0
+      text: " "
+
+- duration: 4
+  segment_displays:
+    upperpegs:
+      flashing: off
+      color: 00acf0
+      text: "{machine.score1_value:,d}"
+    uppergames:
+      flashing: off
+      color: 00acf0
+      text: "{machine.score1_name}"
+    lowerpegs:
+      flashing: off
+      color: 00acf0
+      text:  "{machine.games1_name}"
+    lowergames:
+      flashing: off
+      color: 00acf0
+      text:  "{machine.games1_value:,d}"

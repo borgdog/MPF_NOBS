@@ -85,7 +85,7 @@ slides:
           - property: opacity
             value: 1
             duration: .5s
-            repeat: -1
+            repeat: False
 
     - type: text
       text: ""

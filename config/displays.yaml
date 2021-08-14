@@ -1,0 +1,263 @@
+#config_version=5
+# STAR WARS 
+
+###############################################################################################
+#                                    WINDOW                                                   #
+###############################################################################################
+
+
+window:  # defines the area of the TV monitor that can be used for the backbox display
+  title: NOBSbackbox
+  width: 1080
+  height: 1219    
+  resizable: false
+  fullscreen: false
+  borderless: true
+  exit_on_escape: true
+  top: 0
+  left: 0
+
+###############################################################################################
+#                                     DISPLAYS                                                #
+###############################################################################################
+
+displays:
+  upperpegsdisplay:
+    width: 170
+    height: 95
+  uppergamesdisplay:
+    width: 170
+    height: 95
+  lowerpegsdisplay:
+    width: 170
+    height: 95
+  lowergamesdisplay:
+    width: 170
+    height: 95
+  bipdisplay:
+    width: 50  
+    height: 75
+  backglass:
+    width: 1080
+    height: 1219
+  window:
+    width: 1080
+    height: 1219
+
+segment_displays:
+  upperpegs:
+    default_transition_update_hz: 9
+    size: 3
+    number: 1
+  uppergames:
+    default_transition_update_hz: 9
+    size: 3
+    number: 2
+  lowerpegs:
+    default_transition_update_hz: 9
+    size: 3
+    number: 3
+  lowergames:
+    default_transition_update_hz: 9
+    size: 3
+    number: 4
+  bipseg:
+    number: 5
+    size: 6
+
+virtual_segment_display_connector:
+  segment_displays:
+    - upperpegs
+    - uppergames
+    - lowerpegs
+    - lowergames
+    - bipseg
+
+###############################################################################################
+#                                       SLIDES                                                #
+###############################################################################################
+
+slides:
+  layout: # THIS IS THE MAIN SLIDE THAT DRIVES ALL BACKBOX
+    widgets: # these widgets are the...
+      - type: display               # upper segment pegs
+        width: 170
+        height: 95
+        x: 670
+        y: 854 
+        anchor_x: left
+        anchor_y: bottom
+        source_display: upperpegsdisplay
+
+      - type: display               # upper segment gms
+        width: 170
+        height: 95
+        x: 1020
+        y: 854 
+        anchor_x: right
+        anchor_y: bottom
+        source_display: uppergamesdisplay
+
+      - type: display               # lower segment pegs
+        width: 170
+        height: 95
+        x: 670
+        y: 604 
+        anchor_x: left
+        anchor_y: bottom
+        source_display: lowerpegsdisplay
+      
+      - type: display               # lower segment gms
+        width: 170
+        height: 95
+        x: 1020
+        y: 604 
+        anchor_x: right
+        anchor_y: bottom
+        source_display: lowergamesdisplay
+
+      - type: display               # BIP segment display
+        width: 50
+        height: 75
+        x: 965
+        y: 70 
+        anchor_x: left
+        anchor_y: bottom
+        source_display: bipdisplay
+
+      - type: display               # background
+        width: 1080
+        height: 1219
+        x: 0
+        y: 0
+        anchor_x: left
+        anchor_y: bottom
+        source_display: backglass
+        
+  background:
+    widgets:
+      - type: image
+        image: nobs_bg
+        z: 5
+  
+  background_lit:
+    widgets:
+      - type: image
+        image: nobs_bg_on
+        z: 5
+
+  # background_go:
+  #   widgets:
+  #     - type: image
+  #       image: sw_bg_go
+  #       z: 5
+
+  upperpegssegment:
+    widgets:
+      - type: segment_display_emulator
+        name: upperpegs
+        # display_type: 8segment
+        text: "   "
+        character_count: 3
+        character_slant_angle: 10
+        character_spacing: 11
+        padding: 12
+        segment_width: 0.11
+        segment_off_color: 012030
+        segment_on_color: 00acf0
+        comma_enabled: true
+        width: 170
+        height: 95
+        anchor_x: left
+        anchor_y: bottom
+        x: 0
+        y: 0
+        z: 10
+
+  uppergamessegment:
+    widgets:
+      - type: segment_display_emulator
+        name: uppergames
+        # display_type: 8segment
+        text: "   "
+        character_count: 3
+        character_slant_angle: 10
+        character_spacing: 11
+        padding: 12
+        segment_width: 0.11
+        segment_off_color: 012030
+        segment_on_color: 00acf0
+        comma_enabled: true
+        width: 170
+        height: 95
+        anchor_x: left
+        anchor_y: bottom
+        x: 0
+        y: 0
+        z: 10
+
+  lowerpegssegment:
+    widgets:
+      - type: segment_display_emulator
+        name: lowerpegs
+        # display_type: 8segment
+        text: "   "
+        character_count: 3
+        character_slant_angle: 10
+        character_spacing: 11
+        padding: 12
+        segment_width: 0.11
+        segment_off_color: 012030
+        segment_on_color: 00acf0
+        comma_enabled: true
+        width: 170
+        height: 95
+        anchor_x: left
+        anchor_y: bottom
+        x: 0
+        y: 0
+        z: 10
+
+  lowergamessegment:
+    widgets:
+      - type: segment_display_emulator
+        name: lowergames
+        # display_type: 8segment
+        text: "   "
+        character_count: 3
+        character_slant_angle: 10
+        character_spacing: 11
+        padding: 12
+        segment_width: 0.11
+        segment_off_color: 012030
+        segment_on_color: 00acf0
+        comma_enabled: true
+        width: 170
+        height: 95
+        anchor_x: left
+        anchor_y: bottom
+        x: 0
+        y: 0
+        z: 10
+
+  bipsegment:
+    widgets:
+      - type: segment_display_emulator
+        name: bipseg
+        display_type: 7seg
+        text: " "
+        character_count: 1
+        character_slant_angle: 10
+        character_spacing: 11
+        padding: 12
+        segment_width: 0.16
+        segment_off_color: 012030
+        segment_on_color: 00acf0
+        width: 50
+        height: 75
+        anchor_x: left
+        anchor_y: bottom
+        x: 0
+        y: 0
+        z: 10
+
