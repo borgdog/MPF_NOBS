@@ -1,7 +1,7 @@
 #config_version=5
 # NOBS
 #
-#   Skill shot mode: hit flashing top lane on plunge to be awarded 10,000 points.
+#   Skill shot mode: hit flashing top lane on plunge to be awarded heels - 2 pegs.
 
 mode:
     start_events: ball_starting
