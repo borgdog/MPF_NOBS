@@ -73,6 +73,7 @@ ball_devices:
         ball_switches: s_drain
         eject_coil: c_drain_eject
         debug: true
+        eject_timeouts: 3s
         tags: drain, home, trough
 
 queue_relay_player:
