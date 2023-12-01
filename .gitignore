@@ -1,2 +1,5 @@
 
 *.log
+images/Thumbs.db
+modes/high_score/images/Thumbs.db
+monitor/Thumbs.db
