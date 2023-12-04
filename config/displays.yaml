@@ -1,4 +1,4 @@
-#config_version=5
+#config_version=6
 # STAR WARS 
 
 ###############################################################################################
@@ -163,7 +163,7 @@ slides:
         character_spacing: 11
         padding: 12
         segment_width: 0.11
-        segment_off_color: 012030
+        segment_off_color: "012030"
         segment_on_color: 00acf0
         comma_enabled: true
         width: 170
@@ -185,7 +185,7 @@ slides:
         character_spacing: 11
         padding: 12
         segment_width: 0.11
-        segment_off_color: 012030
+        segment_off_color: "012030"
         segment_on_color: 00acf0
         comma_enabled: true
         width: 170
@@ -207,7 +207,7 @@ slides:
         character_spacing: 11
         padding: 12
         segment_width: 0.11
-        segment_off_color: 012030
+        segment_off_color: "012030"
         segment_on_color: 00acf0
         comma_enabled: true
         width: 170
@@ -229,7 +229,7 @@ slides:
         character_spacing: 11
         padding: 12
         segment_width: 0.11
-        segment_off_color: 012030
+        segment_off_color: "012030"
         segment_on_color: 00acf0
         comma_enabled: true
         width: 170
@@ -251,7 +251,7 @@ slides:
         character_spacing: 11
         padding: 12
         segment_width: 0.16
-        segment_off_color: 012030
+        segment_off_color: "012030"
         segment_on_color: 00acf0
         width: 50
         height: 75
