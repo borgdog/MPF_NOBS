@@ -11,9 +11,9 @@ config:
     - switches.yaml
     - displays.yaml
 
-scriptlets: 
-    cboard.Cboard
-    # resetroto.RotoReset
+# custom_code: 
+#     - code.cboard.Cboard
+#     # resetroto.RotoReset
 
 hardware:
     platform: opp
@@ -30,8 +30,9 @@ opp:
     debug: true
 
 modes:
+    - attract
     - base
-    - high_score
+    # - high_score
     - ebmode
     - skill_shot
     - roto

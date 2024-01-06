@@ -1,21 +1,28 @@
 master_volume:
   expire: null
+  expire_secs: null
   value: 0.5
 player1_score:
   expire: null
+  expire_secs: null
   value: 23
 player1games:
   expire: null
+  expire_secs: null
   value: 0
 player2games:
   expire: null
+  expire_secs: null
   value: 0
 roto:
   expire: null
+  expire_secs: null
   value: 2
 rotodir:
   expire: null
+  expire_secs: null
   value: -1
 rotopos:
   expire: null
+  expire_secs: null
   value: 28
