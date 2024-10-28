@@ -11,9 +11,9 @@ config:
     - switches.yaml
     - displays.yaml
 
-# custom_code: 
-#     - code.cboard.Cboard
-#     # resetroto.RotoReset
+custom_code: 
+    - code.cboard.Cboard
+    # resetroto.RotoReset
 
 hardware:
     platform: opp
